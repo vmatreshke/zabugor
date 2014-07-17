@@ -46,10 +46,248 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
++font(futurabookc, futurabookc)  
+=book
+	font-family: "futurabookc", Arial, sans-serif 
++font(futurabookc-italic, futurabookc-italic)  
+=bookit
+	font-family: "futurabookc-italic", Arial, sans-serif 
++font(futurademic, futurademic)  
+=demic
+	font-family: "futurademic", Arial, sans-serif 
++font(futurademic-italic, futurademic-italic)  
+=demicit
+	font-family: "futurademic-italic", Arial, sans-serif 
++font(rex_bold, rex_bold)  
+=rexb
+	font-family: "rex_bold", Arial, sans-serif 
+$black: #101010
+$dark: #303030
+$brown: #bd904d
+$gray: #666
+$border: #cdcdcd
+$red: #e20317
+html
+	+scrollbar
+		width: 6px
+		height: 6px
+		+border-radius(4px)
+		background: #d1d1d1
+	+scrollbar-thumb
+		background: $brown
+		+border-radius(4px)
+	+scrollbar-track-piece     
+		+border-radius(4px) 
+ 
+	+selection
+		background: rgba($brown,.3) 
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
+	min-width: 1024px
+	background: #fff 
+	+book
+	font-size: 16px 
+a
+	text-decoration: none
+.l-center
+	position: relative
+	margin: 0 auto  
+	padding: 0 40px 
+	max-width: 1366px
 
-
+.to-center
+	text-align: center
+.wrap
+	+clr
+	clear: both
+.wrapper
+	overflow: hidden 
+.out
+	position: relative
+	//margin: 0 0 -542px
+	//min-height: 100%
+	//height: auto !important
+	//height: 100%	  
+.push
+	clear: both
+	height: 542px
 // common blocks      
+
+.header
+	padding-bottom: 14px
+	text-transform: uppercase
+	+demic
+	.l-center
+		position: relative
+		padding: 31px 0 0 
+	a
+		color: $black 
+	&__logo
+		display: block
+		margin: 0 auto 
+		+s(logo)
+		+hide-text 
+	&__left
+		position: absolute
+		left: 0
+		top: 0
+		padding-top: 25px
+	&__right
+		position: absolute
+		top: 0
+		right: 0
+		padding-top: 16px
+		text-align: right
+	&__key
+		display: inline-block
+		margin-right: 20px
+		position: relative
+		vertical-align: middle
+		height: 18px
+		width: 24px
+		background: none
+		&:hover
+			i
+				&:after
+					//bottom: -12px
+					+transform(translateY(4px)) 
+				&:before
+					//top: -12px
+					+transform(translateY(-4px)) 
+		i
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			left: 0
+			right: 0
+			height: 2px
+			background: $black 
+			//+tr(all .3s linear)
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				height: 2px
+				background: inherit  
+				left: 0
+				right: 0
+				+tr(all .2s linear)
+			&:before
+				top: -8px
+			&:after
+				bottom: -8px
+	&__lang
+		display: inline-block
+		vertical-align: middle
+		font-size: 0
+		a
+			display: inline-block
+			position: relative 
+			vertical-align: middle
+			padding: 0 10px 
+			height: 18px
+			line-height: 18px
+			font-size: 12px
+			&:hover
+				&:after,
+				&:before
+					background: $black 
+				&:before
+					top: -9px
+					opacity: 1
+				&:after
+					bottom: -9px
+					opacity: 1
+			&.is-active
+				
+			&:after,
+			&:before
+				content: ""
+				position: absolute
+				left: 10px
+				right: 10px
+				height: 2px
+				opacity: 0
+				background: $gray
+				+tr(all .2s linear) 
+			&:before
+				top: 0
+			&:after
+				bottom: 0
+	&__nav
+		padding-top: 23px
+		+clr
+		a
+			float: left
+			position: relative
+			margin-left: 30px
+			height: 34px
+			line-height: 34px
+			font-size: 12px
+			&:first-child
+				margin-left: 0 
+			&:hover
+				&:after,
+				&:before
+					background: $black 
+				&:before
+					top: 0
+					opacity: 1
+			&.is-active
+				color: $brown 
+				&:after,
+				&:before
+					background: $brown 
+				&:before
+					top: 0
+					opacity: 1
+			&:after,
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				height: 2px
+				background: $gray
+				+tr(all .2s linear) 
+			&:before
+				opacity: 0
+				top: 100%
+			&:after
+				bottom: 0
+	&__tel
+		display: inline-block
+		vertical-align: middle
+		margin-right: 25px
+		font-size: 20px
+		text-align: left
+		i
+			display: inline-block
+			vertical-align: middle
+			margin-right: 12px
+			width: 37px
+			height: 37px
+			line-height: 37px
+			text-align: center
+			border: 2px solid $gray
+			border-radius: 50% 
+			font-size: 12px
+			font-style: normal
+		span
+			display: inline-block
+			vertical-align: middle
+	&__link
+		display: inline-block
+		vertical-align: middle
+		padding: 7px 25px 6px
+		color: #fff
+		background: $brown  
+	.header__link
+		color: #fff 
+
+.footer
+	position: relative
+	min-height: 542px
+	background: $black 
