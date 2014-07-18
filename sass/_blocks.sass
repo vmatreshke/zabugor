@@ -1,2 +1,120 @@
-// Normally mainpage styles
- 
+.link
+	position: relative
+	z-index: 1
+	display: inline-block
+	border: 2px solid
+	padding: 8px 10px 7px
+	min-width: 219px
+	+demic
+	font-size: 12px
+	text-align: center
+	text-transform: uppercase
+	+tr(all 0.3s)
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -1
+		width: 100%
+		height: 0
+		background: #fff  
+		+tr(all .2s)
+	&:hover
+		color: $black 
+		border-color: #fff 
+		&:after
+			height: 100%
+	&.is-liquid
+		display: block
+	&_simple
+		color: #fff
+		border-color: #fff 
+	&_action
+		color: $brown
+		border-color: $brown
+		&:hover
+			color: #fff
+			border-color: $brown
+			&:after
+				height: 100%
+				background: $brown 
+.btn
+	position: relative
+	z-index: 1
+	display: inline-block
+	vertical-align: middle
+	padding: 10px 25px 9px
+	color: #fff
+	+demic
+	font-size: 12px
+	letter-spacing: 0.5px 
+	background: $brown
+	+tr(color .2s linear)
+	&:after
+		content: "" 
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 0
+		background: $black 
+		+tr(all .2s linear)
+	&:hover
+		&:after
+			height: 100%
+			
+.layout
+	display: table
+	width: 100%
+	&_auto
+		.layout__left,
+		.layout__right
+			width: auto
+	&__left,
+	&__right
+		display: table-cell
+		vertical-align: middle
+		width: 50%
+	&__right
+		text-align: right
+		
+
+.title
+	position: relative
+	font-size: 30px
+	+rex 
+	span
+		color: $brown 
+	&.has-sun
+		padding-top: 87px
+		text-align: center
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			top: 0
+			margin-left: -31px 
+			+s(sun)
+	&.has-dots 
+		padding-top: 195px
+		margin-bottom: 67px
+		color: #fff
+		text-align: center
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -2px
+			height: 109px
+			width: 4px
+			background: url(../img/dots-w.png) 0 0 repeat
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			top: 109px
+			margin-left: -31px 
+			+s(sun-white) 
