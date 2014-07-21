@@ -4,7 +4,7 @@ head.ready(function() {
 		$(".js-popup").hide();
 	});
 
-	console.log($('body').html());
+
 
 	$(".js-menu-key").on("click", function(event){
 		$(".js-overlay-menu, .js-menu").addClass("is-visible");

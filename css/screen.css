@@ -29,8 +29,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: futurademic; src: url("../fonts/futurademic.eot"); src: url("../fonts/futurademic.eot?#iefix") format("embedded-opentype"), url("../fonts/futurademic.woff") format("woff"), url("../fonts/futurademic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: futurademic-italic; src: url("../fonts/futurademic-italic.eot"); src: url("../fonts/futurademic-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/futurademic-italic.woff") format("woff"), url("../fonts/futurademic-italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: rex_bold; src: url("../fonts/rex_bold.eot"); src: url("../fonts/rex_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/rex_bold.woff") format("woff"), url("../fonts/rex_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-html::-webkit-scrollbar { width: 6px; height: 6px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background: none; }
-html::-webkit-scrollbar-thumb { background: #bd904d; }
 html ::selection { background: rgba(189, 144, 77, 0.3); }
 html ::-moz-selection { background: rgba(189, 144, 77, 0.3); }
 
