@@ -1,2 +1,43 @@
-// Normally mainpage styles
- 
+.page-head
+	position: relative
+	height: 521px
+	overflow: hidden
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		line-height: 521px
+		margin: -440px 0 0 -3000px
+		width: 6000px
+		height: 880px
+		text-align: center
+		img
+			display: inline-block
+			vertical-align: middle
+	&__box
+		position: absolute
+		left: 50%
+		top: 222px
+		margin-left: -435px
+		padding: 25px 50px 0 70px 
+		width: 870px
+		background: #fff
+		&:before
+			content: ""
+			position: absolute
+			height: 125px 
+			top: -217px
+			left: 50% 
+			margin-left: -2px
+			width: 4px
+			background: url(../img/dots-w.png) 0 0 repeat
+		&:after
+			content: ""
+			position: absolute
+			top: -89px
+			left: 50%
+			margin-left: -31px
+			+s(sun-white)
+	.title
+		text-align: center
+		margin-bottom: 14px
