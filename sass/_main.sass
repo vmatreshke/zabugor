@@ -14,12 +14,13 @@
 			color: #fff
 			i
 				border-color: rgba(#fff,.6)
-	.header__key
-		i
-			background: #fff
-			&:before,
-			&:after
+	.header__left
+		.menu-key
+			i
 				background: #fff
+				&:before,
+				&:after
+					background: #fff
 	.header__nav
 		a
 			&:after,
@@ -45,7 +46,7 @@
 	text-align: center
 	hr
 		margin: 22px auto  
-		width: 53px
+		width: 63px
 		height: 2px
 		background: #fff
 		border: 0
@@ -64,15 +65,18 @@
 		left: 0
 		right: 0
 		bottom: 0
-		height: 111px
+		height: 110px
 		text-align: center
 		.soc-counter
 			position: absolute
 			right: 0
 			bottom: 25px
+	&__descr
+		.link
+			margin-bottom: 10px
 	&__btn
 		position: relative
-		height: 65px
+		height: 66px
 		text-align: center
 		button
 			position: relative
@@ -153,17 +157,24 @@
 				background: $brown 
 	.layout
 		margin-bottom: 45px
+	.layout__left
+		padding-left: 6px
 .text-item
 	position: relative
-	padding: 0 0 41px 0 
+	padding: 0 0 39px 0 
 	span
 		float: left
 		position: relative
 		top: -3px
+		margin-right: 12px
 		font-size: 100px
 		line-height: 1
 		+rex
 		color: $brown 
+		+r(w1250)
+			margin-right: 7px
+	p
+		margin-bottom: 11px
 .more
 	text-align: center
 	color: $brown
@@ -201,7 +212,7 @@
 .dots
 	position: relative
 	margin: 0 auto 
-	height: 527px
+	height: 535px
 	width: 3px
 	background: url(../img/dots.png) 11px 0 repeat
 	&:after
@@ -218,18 +229,59 @@
 	padding-bottom: 91px
 	min-height: 697px
 	background: url(../img/about.png) 50% 0 no-repeat 
+	+r(w1250)
+		margin: 0 -20px 
 	&__descr
 		background: #fff 
-		padding: 25px 25px 0 40px
+		padding: 22px 25px 0 40px
+		+r(w1250)
+			padding-left: 25px
+		.text-item
+			p
+				&:last-child
+					margin-bottom: 0
+	.layout__left,
+	.layout__right
+		vertical-align: top
+	.layout__left
+		+r(w1250)
+			width: 61%
+	.layout__right
+		+r(w1250)
+			width: auto
 	&__info
-		padding: 10px 25px 0 40px
+		padding: 16px 25px 0 40px
 		color: #fff 
 		text-align: left
+		+r(w1250)
+			padding-left: 18px
+		.layout
+			margin-bottom: 20px
+			+r(w1250)
+				margin-bottom: 3px
 		.layout__right
 			padding-left: 25px
 			text-align: left
-		.layout
-			margin-bottom: 20px
+			+r(w1250)
+				width: auto
+				padding-left: 20px
+		.layout__left
+			+r(w1250)
+				width: 125px
+		.layout__left,
+		.layout__right
+			vertical-align: middle
+		
+				
+	&__link
+		+r(w1250)
+			margin-left: 150px
+		.link
+			margin: 0 10px 
+			+r(w1250)
+				display: block
+				margin: 5px 0
+				max-width: 220px
 	.more
 		position: absolute
 		left: 0
@@ -246,6 +298,10 @@
 	font-size: 48px
 	text-align: center
 	+rex
+	+r(w1250)
+		width: 125px
+		height: 125px
+		font-size: 41px
 	span
 		display: block
 		width: 100%
@@ -253,6 +309,8 @@
 		border: 1px solid
 		line-height: 125px  
 		border-radius: 50% 
+		+r(w1250)
+			line-height: 110px
 
 .benefit
 	padding: 20px 0 10px
@@ -260,15 +318,25 @@
 		margin: 9px 0 67px 
 		text-align: center
 	&__list
+		margin-bottom: -18px
 		font-size: 0
 		li
 			display: inline-block
 			position: relative
 			vertical-align: top
 			margin: 0 0 62px 
-			padding-right: 5%
+			padding-right: 4%
 			width: 33%
 			font-size: 16px
+			+r(w1250)
+				width: 50% !important
+				margin: 0 0 58px !important
+			&:nth-child(3n+5),
+			&:nth-child(2)
+				margin-left: 3%
+			&:nth-child(3n+3)
+				width: 29%
+				margin-left: 2%
 			&:before
 				content: ""
 				position: absolute
@@ -277,6 +345,82 @@
 				width: 62px
 				height: 2px
 				background: $brown  
-.contascts
-	min-height: 506px
+.contacts-wrap
+	position: relative
+	margin: -3px -40px 35px
+	min-height: 506px  
 	background: url(../img/cont-bg.png) 50% 0 no-repeat
+	+clr
+	+r(w1250)
+		margin: -3px -20px 35px
+	.title
+		margin-bottom: 26px
+		padding-top: 245px
+		&:before
+			height: 153px
+		&:after
+			top: 160px
+.contacts
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: -321px
+	display: table
+	+clr
+	width: 643px
+	background: #fff 
+	&__col
+		position: relative
+		padding: 21px 8% 40px
+		width: 50%
+		display: table-cell
+		vertical-align: top
+		font-size: 16px 
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 23px
+			bottom: 0 
+			width: 3px
+			background: url(../img/dots.png) 0 0 repeat
+		&:first-child
+			&:before
+				display: none
+		.link
+			position: absolute
+			bottom: 0
+			text-align: center
+	&__list
+		line-height: 1.4
+		li
+			position: relative
+			margin-bottom: 6px
+			padding-left: 34px
+			span
+				position: absolute
+				left: 0
+				top: 1px
+				color: $brown 
+	&__title
+		position: relative
+		margin-bottom: 17px
+		padding-bottom: 21px
+		font-size: 12px
+		+demic
+		text-transform: uppercase
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 63px
+			height: 2px
+			background: rgba(#171717, .6)
+
+.special
+	text-align: center
+	.title
+		margin-bottom: 7px
+	p
+		margin-bottom: 26px

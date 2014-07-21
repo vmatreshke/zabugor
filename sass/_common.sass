@@ -84,18 +84,29 @@ body
 	line-height: 1.4
 	min-width: 1024px
 	background: #fff 
-	letter-spacing: .5px 
+	letter-spacing: .7px 
 	+book
 	font-size: 16px 
+	&.has-fixed-nav
+		.header__main
+			opacity: 0
+			visibility: hidden
+			+transform(translateY(-300px))
+		.nav
+			+transform(translateY(0))
 a
 	text-decoration: none
+.out
+	margin-bottom: 44px
 .l-center
 	position: relative
 	margin: 0 auto  
 	padding: 0 40px 
 	max-width: 1366px
-
-.to-center
+	+r(w1250)
+		max-width: 1000px
+		padding: 0 20px 
+.to-center 
 	text-align: center
 .wrap
 	+clr
@@ -120,9 +131,11 @@ a
 .header
 	text-transform: uppercase
 	+demic
-	.l-center
+	&__main  
 		position: relative
 		padding: 31px 0 18px
+		+tr(all .2s ceaser($easeOutBack))
+		+transform(translateY(0))
 	a
 		color: $black 
 	&__logo
@@ -137,6 +150,11 @@ a
 		padding-top: 25px
 		.header__nav
 			padding-top: 23px
+		.btn
+			display: none
+			margin-right: 26px
+			+r(w1250)
+				display: inline
 	&__right
 		position: absolute
 		top: 0
@@ -145,44 +163,14 @@ a
 		text-align: right
 		.header__nav
 			padding-top: 13px
-	&__key
+		.btn
+			+r(w1250)
+				display: none
+	.menu-key
 		display: inline-block
 		margin-right: 16px
 		position: relative
 		vertical-align: middle
-		height: 18px
-		width: 24px
-		background: none
-		&:hover
-			i
-				&:after
-					//bottom: -12px
-					+transform(translateY(4px)) 
-				&:before
-					//top: -12px
-					+transform(translateY(-4px)) 
-		i
-			position: absolute
-			top: 50%
-			margin-top: -1px
-			left: 0
-			right: 0
-			height: 2px
-			background: $black 
-			//+tr(all .3s linear)
-			&:before,
-			&:after
-				content: ""
-				position: absolute
-				height: 2px
-				background: inherit  
-				left: 0
-				right: 0
-				+tr(all .2s linear)
-			&:before
-				top: -8px
-			&:after
-				bottom: -8px
 	&__lang
 		display: inline-block
 		vertical-align: middle
@@ -205,8 +193,6 @@ a
 				&:after
 					bottom: -9px
 					opacity: 1
-			&.is-active
-				
 			&:after,
 			&:before
 				content: ""
@@ -223,6 +209,8 @@ a
 				bottom: 0
 	&__nav
 		+clr
+		+r(w1250)
+			display: none
 		a
 			float: left
 			position: relative
@@ -266,6 +254,161 @@ a
 		color: #fff 
 	.tel
 		margin-right: 25px
+.menu-key
+	display: inline-block
+	height: 18px
+	width: 24px
+	background: none
+	&:hover
+		i
+			&:after
+				//bottom: -12px
+				+transform(translateY(4px)) 
+			&:before
+				//top: -12px
+				+transform(translateY(-4px)) 
+	i
+		position: absolute
+		top: 50%
+		margin-top: -1px
+		left: 0
+		right: 0
+		height: 2px
+		background: $black  
+		//+tr(all .3s linear)
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			background: inherit  
+			left: 0
+			right: 0
+			+tr(all .2s linear)
+		&:before
+			top: -8px
+		&:after
+			bottom: -8px
+.nav
+	position: fixed
+	top: 0
+	+transform(translateY(-150px))
+	left: 0
+	right: 0 
+	z-index: 99
+	background: #fff
+	border-bottom: 1px solid #efeeee 
+	+tr(transform .2s ceaser($easeOutBack))
+	.l-center
+		position: relative
+		padding: 15px 40px 7px 
+		+clr
+		+r(w1250)
+			padding: 15px 20px 7px 
+	.menu-key 
+		position: absolute
+		top: 24px
+		right: 24px
+		+r(w1250)
+			right: 0
+	&__logo
+		float: left
+		margin-top: 6px
+		+s(logo-nav)
+	&__main
+		position: relative
+		overflow: hidden
+		text-align: right
+		font-size: 0  
+		padding-right: 55px
+		+r(w1250)
+			display: none
+		a
+			display: inline-block
+			vertical-align: middle
+			height: 35px
+			line-height: 35px
+			margin-left: 25px
+			font-size: 12px
+			color: $black !important
+			text-transform: uppercase
+			+demic 
+			+tr(color .2s linear)
+			&:first-child
+				margin-left: 0
+			&:hover
+				color: $brown  !important 
+.menu
+	position: fixed
+	top: 0
+	+transform(translateX(-5000px))
+	width: 100%
+	overflow: hidden
+	z-index: 101
+	text-align: center
+	background: #fff 
+	visibility: hidden
+	+tr(all .2s linear)
+	&.is-visible
+		+transform(translateX(0))
+		visibility: visible
+	&__in
+		position: relative
+		margin: 0 auto 
+		padding: 10px 40px 25px 86px 
+		max-width: 1366px
+		background: #fff 
+		+justify
+		.btn-close
+			position: absolute
+			left: 40px
+			top: 24px
+		a
+			position: relative
+			display: inline-block
+			height: 36px
+			line-height: 36px
+			font-size: 12px
+			text-align: left
+			+demic 
+			color: $black !important 
+			text-transform: uppercase
+			&:hover
+				&:after,
+				&:before
+					background: rgba(#000,1) 
+				&:before
+					top: 0
+					opacity: 1
+			&:after,
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				height: 2px
+				background: #000 
+				background: rgba(#000,.6)
+				+tr(all .2s linear) 
+			&:before
+				opacity: 0
+				top: 100%
+			&:after
+				bottom: 0
+.overlay-menu
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 100
+	visibility: hidden
+	background: rgba(#000,.3) 
+	opacity: 0
+	+tr(all .2s linear) 
+	&.is-visible
+		visibility: visible
+		opacity: 1 
 .tel
 	display: inline-block
 	vertical-align: middle
@@ -311,25 +454,44 @@ a
 		letter-spacing: .6px
 		span
 			display: inline-block
+			vertical-align: middle
 			margin-left: 44px
 			font-size: 14px
+			+r(w1250)
+				margin-left: 15px
 			&:first-child
-				margin-left: 7%
+				margin-left: 0
 		em
 			font-style: normal
 			color: $brown 
 	&__subscribe
 		+justify
+		+r(w1250)
 		span
 			font-size: 14px
 			display: inline-block
+			vertical-align: middle
 			margin-right: 10px
 			text-align: left
+			+r(w1250)
+				max-width: 210px
+		.link
+			vertical-align: middle
 	&__main 
 		padding: 19px 0 27px
 		+clr
 		.link
 			margin-top: 5px
+		+r(w1250)
+			.col-two
+				width: 55.5%
+				&:first-child
+					width: 44.5%
+				.col-two
+					width: 42%
+					&:first-child
+						width: 58%
+				
 	&__nav
 		
 		li
@@ -363,6 +525,11 @@ a
 				float: left
 				width: 50%
 				padding: 7px 10px 0 0
+				+r(w1250)
+					width: 40%
+					margin-left: 10%
+					&:nth-child(2)
+						margin-left: 0
 				a
 					color: #fff 
 					text-transform: none

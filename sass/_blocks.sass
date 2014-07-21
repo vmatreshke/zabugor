@@ -39,12 +39,14 @@
 			&:after
 				height: 100%
 				background: $brown 
+	&_fixed-width
+		min-width: 271px
 .btn
 	position: relative
 	z-index: 1
 	display: inline-block
 	vertical-align: middle
-	padding: 10px 25px 9px
+	padding: 8px 25px 7px
 	color: #fff
 	+demic
 	font-size: 12px
@@ -64,10 +66,36 @@
 	&:hover
 		&:after
 			height: 100%
-			
+.btn-close
+	position: relative
+	width: 20px
+	height: 20px
+	overflow: visible
+	background: none
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		+tr(all .2s linear)
+	&:before
+		+s(close)		
+	&:after
+		+s(close-h)	
+		visibility: hidden
+		opacity: 0
+	&:hover
+		&:after
+			visibility: visible
+			opacity: 1
+		&:before
+			visibility: hidden
+			opacity: 0
 .layout
 	display: table
 	width: 100%
+	table-layout: fixed
 	&_auto
 		.layout__left,
 		.layout__right
@@ -85,6 +113,7 @@
 	position: relative
 	font-size: 30px
 	+rex 
+	letter-spacing: 1.8px 
 	span
 		color: $brown 
 	&.has-sun
