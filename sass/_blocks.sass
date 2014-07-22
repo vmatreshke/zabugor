@@ -52,6 +52,7 @@
 	font-size: 12px
 	letter-spacing: 0.5px 
 	background: $brown
+	text-transform: uppercase
 	+tr(color .2s linear)
 	&:after
 		content: "" 
@@ -66,6 +67,8 @@
 	&:hover
 		&:after
 			height: 100%
+	&_height
+		padding: 29px 25px 29px 
 .btn-close
 	position: relative
 	width: 20px
@@ -113,6 +116,7 @@
 	position: relative
 	font-size: 30px
 	+rex 
+	text-align: center
 	letter-spacing: 1.8px 
 	span
 		color: $brown 
@@ -139,7 +143,7 @@
 			position: absolute
 			top: 0
 			left: 50%
-			margin-left: -2px
+			margin-left: -3px
 			height: 109px
 			width: 4px
 			background: url(../img/dots-w.png) 0 0 repeat
@@ -150,3 +154,127 @@
 			top: 109px
 			margin-left: -31px 
 			+s(sun-white) 
+	&.has-line
+		padding: 21px 0 0 
+		text-align: left
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 63px
+			height: 2px
+			background: $brown
+.dots-line
+	position: relative
+	margin: 0 auto 5px
+	height: 222px
+	width: 3px
+	background: url(../img/dots.png) 11px 0 repeat
+
+.links-wrap
+	text-align: center
+	+clr
+	width: 660px
+	margin: 9px auto 47px
+	+column-count(2)
+	+column-gap(100px)
+	&_mod
+		margin-bottom: 17px
+	// .links
+	// 	display: inline-block
+	// 	width: 330px
+	// 	padding-left: 50px
+	// 	text-align: left
+	// 	&:first-child
+	// 		padding: 0 50px 0 0  
+	a
+		display: block
+		position: relative 
+		margin-bottom: 6px
+		padding: 9px 0 
+		font-size: 12px
+		color: $brown
+		text-align: left
+		text-transform: uppercase
+		+demic 
+		+gpu
+		&:hover
+			&:before
+				top: 0
+				visibility: visible
+				opacity: 1
+		&:after,
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px
+			background: $brown  
+		&:after
+			bottom: 0
+		&:before	
+			opacity: 0
+			visibility: hidden
+			top: 100%
+			+tr(all .2s linear)
+// .links
+// 	padding: 8px 0 47px
+// 	a
+// 		display: block
+// 		position: relative 
+// 		margin-bottom: 6px
+// 		padding: 9px 0 
+// 		font-size: 12px
+// 		color: $brown
+// 		text-transform: uppercase
+// 		+demic 
+// 		&:hover
+// 			&:before
+// 				top: 0
+// 				visibility: visible
+// 				opacity: 1
+// 		&:after,
+// 		&:before
+// 			content: ""
+// 			position: absolute
+// 			left: 0
+// 			right: 0
+// 			height: 2px
+// 			background: $brown  
+// 		&:after
+// 			bottom: 0
+// 		&:before	
+// 			opacity: 0
+// 			visibility: hidden
+// 			top: 100%
+// 			+tr(all .2s linear)
+
+.tel
+	display: inline-block
+	vertical-align: middle
+	font-size: 20px
+	text-align: left
+	letter-spacing: 1.3px 
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 12px
+		width: 37px
+		height: 37px
+		line-height: 37px
+		text-align: center 
+		border: 2px solid $gray
+		border-radius: 50% 
+		font-size: 12px
+		font-style: normal
+		+demic
+	span
+		display: inline-block
+		vertical-align: middle
+	strong
+		display: block
+		font-weight: normal
+		font-size: 20px
+		+demic

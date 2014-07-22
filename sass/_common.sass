@@ -105,6 +105,9 @@ a
 	max-width: 1366px
 	+r(w1250)
 		max-width: 1000px
+		padding: 0 20px
+	&_small
+		max-width: 1000px 
 		padding: 0 20px 
 .to-center 
 	text-align: center
@@ -134,7 +137,7 @@ a
 	&__main  
 		position: relative
 		padding: 31px 0 18px
-		+tr(all .2s ceaser($easeOutBack))
+		+tr(all .2s linear)
 		+transform(translateY(0))
 	a
 		color: $black 
@@ -409,27 +412,7 @@ a
 	&.is-visible
 		visibility: visible
 		opacity: 1 
-.tel
-	display: inline-block
-	vertical-align: middle
-	font-size: 20px
-	text-align: left
-	letter-spacing: 1.3px 
-	i
-		display: inline-block
-		vertical-align: middle
-		margin-right: 12px
-		width: 37px
-		height: 37px
-		line-height: 37px
-		text-align: center 
-		border: 2px solid $gray
-		border-radius: 50% 
-		font-size: 12px
-		font-style: normal
-	span
-		display: inline-block
-		vertical-align: middle
+
 .footer
 	position: relative 
 	min-height: 542px
