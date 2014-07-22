@@ -238,6 +238,18 @@
 	+book
 	+ .load-more
 		margin-top: -18px
+	&_width
+		margin-bottom: 15px
+		padding: 43px 0 34px
+		width: 100%
+		display: block
+		.post__img,
+		.post__body 
+			width: 635px
+			p
+				margin-bottom: 16px
+		.post__body 
+			padding-top: 3px
 	&__top
 		margin-bottom: 12px
 		+clr
@@ -331,3 +343,37 @@
 			height: 6px
 			background: $brown
 			border-radius: 50%   
+			
+.post-nav
+	+justify
+	a
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		padding: 10px 0 
+		font-size: 12px
+		text-transform: uppercase
+		+demic
+		color: $black 
+		text-align: left
+		&:hover
+			color: $brown 
+			&:before
+				top: 0
+				visibility: visible
+				opacity: 1
+		&:after,
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px
+			background: $brown  
+		&:after
+			bottom: 0
+		&:before
+			top: 100%
+			opacity: 0
+			visibility: hidden
+			+tr(all .2s linear)
