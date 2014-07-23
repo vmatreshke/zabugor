@@ -165,13 +165,15 @@
 			width: 63px
 			height: 2px
 			background: $brown
+	&_mod
+		margin-bottom: 26px
 .dots-line
 	position: relative
 	margin: 0 auto 5px
 	height: 222px
 	width: 3px
 	background: url(../img/dots.png) 11px 0 repeat
-
+ 
 .links-wrap
 	text-align: center
 	+clr
@@ -278,3 +280,74 @@
 		font-weight: normal
 		font-size: 20px
 		+demic
+
+.link-more
+	display: inline-block
+	position: relative
+	padding: 9px 0 
+	color: $brown 
+	font-size: 12px
+	text-transform: uppercase
+	+demic
+	&:hover
+		&:before
+			top: 0
+			visibility: visible
+			opacity: 1
+	&:after,
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		height: 2px
+		background: $brown  
+	&:after
+		bottom: 0
+	&:before
+		top: 100%
+		opacity: 0
+		visibility: hidden
+		+tr(all .2s linear) 
+		
+.link-item
+	font-size: 12px
+	+demic
+	text-transform: uppercase
+	white-space: nowrap
+	span
+		display: inline-block
+		margin-right: 26px
+		vertical-align: top
+		white-space: normal
+	a
+		display: inline-block
+		vertical-align: top
+		position: relative
+		margin-top: -10px
+		padding: 10px 0 
+		max-width: 221px
+		color: $brown
+		+tr(color .2s linear)
+		white-space: normal
+		&:hover
+			color: $black 
+			&:before
+				top: 0
+				visibility: visible
+				opacity: 1
+		&:after,
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px
+			background: $brown  
+		&:after
+			bottom: 0
+		&:before
+			top: 100%
+			opacity: 0
+			visibility: hidden
+			+tr(all .2s linear) 
