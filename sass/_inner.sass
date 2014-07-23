@@ -33,6 +33,24 @@
 			&:before
 				height: 250px
 				top: -339px
+	&_propos
+		height: 697px
+		.page-head__box
+			top: 168px
+			background: none
+			text-align: center
+			&:before
+				height: 100px
+				top: -169px
+			&:after
+				top: -68px
+			.title
+				color: #fff
+				margin-bottom: 90px 
+		.more_white
+			height: 91px
+			&:after
+				display: none
 	&__img
 		position: absolute
 		top: 50%
@@ -199,6 +217,10 @@
 .text-cols
 	+column-count(2)
 	+column-gap(85px)
+	p
+		margin-bottom: 22px
+	span
+		color: $brown 
 .title-info
 	margin-bottom: 50px
 	text-align: center
@@ -630,3 +652,10 @@
 	&__item
 		margin-bottom: 10px
 		text-align: center
+
+.info-box
+	margin: 14px 0 
+	text-align: center
+	text-transform: uppercase
+	+demic
+	font-size: 12px

@@ -417,6 +417,13 @@ a { text-decoration: none; }
 .page-head_width-box .page-head__box { margin-left: -480px; width: 960px; }
 .page-head_mod .page-head__box { top: 342px; height: 180px; }
 .page-head_mod .page-head__box:before { height: 250px; top: -339px; }
+.page-head_propos { height: 697px; }
+.page-head_propos .page-head__box { top: 168px; background: none; text-align: center; }
+.page-head_propos .page-head__box:before { height: 100px; top: -169px; }
+.page-head_propos .page-head__box:after { top: -68px; }
+.page-head_propos .page-head__box .title { color: white; margin-bottom: 90px; }
+.page-head_propos .more_white { height: 91px; }
+.page-head_propos .more_white:after { display: none; }
 .page-head__img { position: absolute; top: 50%; left: 50%; line-height: 521px; margin: -440px 0 0 -3000px; width: 6000px; height: 880px; text-align: center; }
 .page-head__img div { display: inline-block; position: relative; vertical-align: middle; }
 .page-head__img div:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.2); }
@@ -464,6 +471,8 @@ a { text-decoration: none; }
 .get-help .banner:first-child { margin-left: 0; }
 
 .text-cols { -moz-column-count: 2; -webkit-column-count: 2; column-count: 2; -moz-column-gap: 85px; -webkit-column-gap: 85px; column-gap: 85px; }
+.text-cols p { margin-bottom: 22px; }
+.text-cols span { color: #bd904d; }
 
 .title-info { margin-bottom: 50px; text-align: center; }
 
@@ -583,3 +592,5 @@ a { text-decoration: none; }
 .share.is-active .link-more_share:before { top: 0; opacity: 1; visibility: visible; }
 .share__list { position: absolute; top: 0; margin-top: 5px; left: 50%; margin-left: -60px; padding: 10px 10px 0; width: 120px; background: white; z-index: 2; visibility: hidden; opacity: 0; border: 2px solid #bd904d; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .share__item { margin-bottom: 10px; text-align: center; }
+
+.info-box { margin: 14px 0; text-align: center; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; font-size: 12px; }
