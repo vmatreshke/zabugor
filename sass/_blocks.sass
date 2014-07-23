@@ -289,6 +289,16 @@
 	font-size: 12px
 	text-transform: uppercase
 	+demic
+	&_share
+		span
+			display: inline-block
+			position: relative
+			&:before
+				content: "" 
+				position: absolute
+				left: -34px
+				top: 4px
+				+s(share)
 	&:hover
 		&:before
 			top: 0

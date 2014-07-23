@@ -30,6 +30,9 @@
 		.page-head__box
 			top: 342px
 			height: 180px
+			&:before
+				height: 250px
+				top: -339px
 	&__img
 		position: absolute
 		top: 50%
@@ -39,13 +42,25 @@
 		width: 6000px
 		height: 880px
 		text-align: center
-		img
+		div
 			display: inline-block
+			position: relative
 			vertical-align: middle
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background: rgba(#000,.2) 
+		img
+			display: block
 	&__box
 		position: absolute
 		left: 50%
 		top: 222px
+		z-index: 2
 		margin-left: -420px
 		padding: 26px 50px 0 44px 
 		width: 840px
@@ -131,7 +146,41 @@
 			text-align: left
 		.tel
 			text-align: left
-			
+.content
+	overflow: hidden
+	img
+		margin-bottom: 26px		
+		max-width: 100%
+		+ p
+			&:nth-child(2)
+				&:first-letter
+					float: left
+					position: relative
+					top: -3px
+					margin-right: 12px
+					font-size: 100px
+					line-height: 1
+					+rex 
+					color: $brown 
+					+r(w1250)
+						margin-right: 7px
+	p
+		margin-bottom: 11px
+		+clr
+		+ img
+			margin-top: 26px
+		&:first-child
+			&:first-letter
+				float: left
+				position: relative
+				top: -3px
+				margin-right: 12px
+				font-size: 100px
+				line-height: 1
+				+rex 
+				color: $brown 
+				+r(w1250)
+					margin-right: 7px
 .get-help
 	margin: 6px 0 70px
 	text-align: center
@@ -295,6 +344,8 @@
 				margin-bottom: 16px
 		.post__body 
 			padding-top: 3px
+		+ .post-nav
+			margin-top: -17px
 	&__top
 		margin-bottom: 12px
 		+clr
@@ -390,6 +441,8 @@
 			border-radius: 50%   
 			
 .post-nav
+	border-top: 2px solid $brown
+	padding-top: 15px 
 	+justify
 	a
 		display: inline-block
@@ -401,6 +454,8 @@
 		+demic
 		color: $black 
 		text-align: left
+		&:nth-child(2)
+			color: $brown 
 		&:hover
 			color: $brown 
 			&:before
@@ -528,3 +583,50 @@
 			font-size: 100px
 			counter-increment: list2  
 			content: counter(list2)
+
+.more-info
+	margin-bottom: 30px
+	.wrap
+		padding-bottom: 10px
+	.tel
+		font-size: 16px
+		+ span
+			display: inline-block
+			margin: 0 10px 
+	.title
+		float: left
+		max-width: 800px
+		
+	.share
+		float: right
+	+ .post-nav
+		margin-bottom: 36px
+.share
+	position: relative
+	&.is-active
+		.share__list
+			top: 100%
+			opacity: 1
+			visibility: visible
+		.link-more_share
+			&:before
+				top: 0
+				opacity: 1
+				visibility: visible
+	&__list
+		position: absolute
+		top: 0
+		margin-top: 5px
+		left: 50%
+		margin-left: -60px
+		padding: 10px 10px 0
+		width: 120px
+		background: #fff 
+		z-index: 2
+		visibility: hidden
+		opacity: 0
+		border: 2px solid $brown
+		+tr(all .2s linear)
+	&__item
+		margin-bottom: 10px
+		text-align: center

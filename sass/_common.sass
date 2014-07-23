@@ -111,6 +111,7 @@ a
 		padding: 0 20px 
 	.l-center_small
 		padding: 0
+		max-width: 960px
 		+r(w1250)
 			padding: 0
 .to-center 
@@ -345,7 +346,8 @@ a
 			+tr(color .2s linear)
 			&:first-child
 				margin-left: 0
-			&:hover
+			&:hover,
+			&.is-active
 				color: $brown  !important 
 .menu
 	position: fixed

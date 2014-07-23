@@ -2,6 +2,7 @@ head.ready(function() {
 
 	$(document).on("click", function(){
 		$(".js-popup").hide();
+		$(".js-share").removeClass("is-active");
 	});
 
 
@@ -42,6 +43,15 @@ head.ready(function() {
 	        }, 500);
 		}
 		
+		return false;
+	});
+	$(".js-share-link").on("click", function(event){
+		$(this).parents(".js-share").addClass("is-active");
+		event.stopPropagation();
+		return false;
+	});
+	$(".js-share-list").on("click", function(event){
+		event.stopPropagation();
 		return false;
 	});
 
