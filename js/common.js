@@ -3,6 +3,7 @@ head.ready(function() {
 	$(document).on("click", function(){
 		$(".js-popup").hide();
 		$(".js-share").removeClass("is-active");
+		$(".js-drop").removeClass("is-active");
 	});
 
 
@@ -54,6 +55,19 @@ head.ready(function() {
 		event.stopPropagation();
 		return false;
 	});
-
+	$(".js-drop-link").on("click", function(event){
+		$(this).parents(".js-drop").addClass("is-active");
+		event.stopPropagation();
+		return false;
+	});
+	$(".js-drop-list").on("click", function(event){
+		event.stopPropagation();
+		return false;
+	});
+	$(".js-drop-close").on("click", function(event){
+		$(this).parents(".js-drop").removeClass("is-active");
+		event.stopPropagation();
+		return false;
+	});
 
 }); 
