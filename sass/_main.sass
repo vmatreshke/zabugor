@@ -165,17 +165,6 @@
 .text-item
 	position: relative
 	padding: 0 0 39px 0 
-	// span
-	// 	float: left
-	// 	position: relative
-	// 	top: -3px
-	// 	margin-right: 12px
-	// 	font-size: 100px
-	// 	line-height: 1
-	// 	+rex
-	// 	color: $brown 
-	// 	+r(w1250)
-	// 		margin-right: 7px
 	p
 		margin-bottom: 11px
 		+clr
@@ -191,6 +180,9 @@
 				color: $brown 
 				+r(w1250)
 					margin-right: 7px
+	&_small
+		margin: 0 auto 
+		width: 820px
 .more
 	text-align: center
 	color: $brown
@@ -382,6 +374,7 @@
 		+demic
 		line-height: 1.6
 		text-transform: uppercase
+		color: $brown 
 		a
 			color: $brown 
 .contacts-wrap
@@ -486,47 +479,6 @@
 		max-width: 980px
 	.title
 		margin-bottom: 16px
-.banner
-	position: relative
-	padding: 6px 
-	float: left
-	margin: 0 0 8px 50px
-	width: 465px 
-	///height: 222px
-	border: 2px solid $brown
-	text-align: center
-	&:first-child,
-	&:nth-child(2n+1)
-		margin-left: 0 
-	+r(w1250)
-		margin-left: 30px
-	&:hover
-		.banner__overlay
-			height: 100%
-	&__img
-		display: block
-		height: 183px
-		overflow: hidden
-		img
-			max-width: 100%
-	&__title
-		display: block
-		padding: 5px 0 2px
-		font-size: 12px
-		text-transform: uppercase
-		color: $brown 
-		+demic
-	&__overlay
-		position: absolute
-		top: 0
-		height: 0
-		left: 0
-		right: 0
-		line-height: 222px
-		background: $brown
-		overflow: hidden 
-		color: #fff  
-		+tr(height .2s linear)
 
 .offer-list
 	position: relative 

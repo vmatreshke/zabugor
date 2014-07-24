@@ -361,3 +361,85 @@
 			opacity: 0
 			visibility: hidden
 			+tr(all .2s linear) 
+			
+.banner
+	position: relative
+	padding: 6px 
+	float: left
+	margin: 0 0 8px 50px
+	width: 465px 
+	min-height: 222px
+	border: 2px solid $brown
+	text-align: center
+	&:first-child,
+	&:nth-child(2n+1)
+		margin-left: 0 
+	+r(w1250)
+		margin-left: 30px
+	&:hover
+		.banner__overlay
+			height: 100%
+	&_extend
+		background: $brown
+		.banner__img
+			height: 212px
+		.banner__descr
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			padding: 18px 20px  
+			width: 270px
+			text-align: left
+			color: #fff 
+			background: $brown 
+			+demic
+			font-size: 12px
+			text-transform: uppercase
+			strong
+				display: block
+				margin-bottom: 17px
+				font-weight: normal
+				+rex
+				font-size: 24px
+	&_height
+		min-height: 227px
+		.banner__title
+			padding-top: 10px
+	&__img
+		display: block
+		height: 183px
+		overflow: hidden
+		img
+			max-width: 100%
+	&__title
+		display: block
+		padding: 5px 0 2px
+		font-size: 12px
+		text-transform: uppercase
+		color: $brown 
+		+demic
+	&__overlay
+		position: absolute
+		top: 0
+		height: 0
+		left: 0
+		right: 0
+		line-height: 222px
+		background: $brown
+		overflow: hidden 
+		color: #fff  
+		+tr(height .2s linear)
+
+.place-list-wrap
+	+column-count(3)
+.place-list
+	li
+		margin-bottom: 5px
+	.title
+		text-align: left
+.info
+	color: $black
+	font-size: 12px
+	text-transform: uppercase
+	+demic 

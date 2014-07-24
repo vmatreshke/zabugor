@@ -157,6 +157,28 @@
 	margin: 10px auto 55px
 	width: 545px
 	font-size: 0
+	&_width
+		width: 610px
+		.contact-box__item
+			&:last-child
+				text-align: left
+		.tel
+			font-size: 16px
+		.link_action
+			margin-top: 13px
+		.title
+			text-align: left
+	&_big
+		width: 740px
+		.contact-box__item
+			&:last-child
+				text-align: left
+		.tel
+			font-size: 16px
+		.link_action
+			margin-top: 13px
+		.title
+			text-align: left
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -431,7 +453,7 @@
 			+tr(all .2s linear)
 			
 .load-more
-	margin: 0 auto 20px 
+	margin: 0 0 20px 
 	text-align: center
 	width: 960px
 .wrap_list
@@ -813,3 +835,146 @@
 		top: 20px
 		right: 20px
 		+s(close-w)
+
+.sort
+	text-align: center
+	margin: 22px 0 28px 
+	.link-more
+		margin-left: 42px
+		&:first-child
+			margin-left: 0
+		&.is-active
+			color: $black
+			&:before
+				opacity: 1
+				visibility: visible
+				top: 0
+
+.items-wrap
+	margin-right: -65px
+	padding: 29px 0 0 
+	font-size: 0
+.item
+	display: inline-block
+	vertical-align: top
+	margin: 0 59px 41px 0
+	width: 450px 
+	+clr
+	&:hover
+		.item__main
+			&:before,
+			&:after
+				background: $black
+	&__img
+		float: left
+		margin-right: 31px
+		width: 158px
+		overflow: hidden
+		img
+			max-width: 100%
+			display: block
+	&__main
+		overflow: hidden
+		position: relative
+		padding: 8px 0 
+		min-height: 88px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px
+			background: $brown
+			+tr(background .2s linear)
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+	&__cat
+		display: block
+		text-transform: uppercase
+		font-size: 12px
+		+demic
+		color: $brown 
+	&__title
+		font-size: 20px
+		color: $black
+		+rex 
+		+tr(color .2s linear)
+		&:hover
+			color: $brown 
+
+.place-list
+	margin: 0 0 36px 
+	.title
+		margin-bottom: 8px
+		text-align: left
+
+.info
+	padding-left: 30px
+	border-left: 2px solid 
+	text-transform: uppercase
+	color: $black
+	font-size: 12px
+	+demic 
+
+.contacts-group
+	top: auto
+	bottom: 0
+	padding: 21px 0 0
+	width: 740px
+	background: #fff 
+	margin-left: -370px
+	.contacts
+		position: static
+		margin: 0
+		width: 100%
+		&__col
+			padding: 21px 42px 40px 38px
+		&__address
+			margin-bottom: 10px
+			a
+				color: $black 
+.contact-shedule
+	margin: 40px auto 0
+	width: 410px
+	+justify
+	li
+		display: inline-block
+		text-align: left
+		font-size: 12px
+		+demic
+		text-transform: uppercase
+		span
+			color: $brown 
+			display: inline-block
+			margin-right: 10px
+			
+.contact-col
+	float: left
+	width: 33%
+	padding-left: 4%
+	&:first-child
+		padding-left: 0
+	&__title
+		position: relative 
+		display: inline-block
+		padding-bottom: 20px
+		margin-bottom: 17px
+		font-size: 12px
+		text-transform: uppercase
+		+demic
+		color: $brown 
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 2px
+			background: $brown  
+.map
+	margin-bottom: -44px
+.map__body
+	height: 440px

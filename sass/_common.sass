@@ -135,7 +135,34 @@ a
 .col-two
 	float: left
 	width: 50%	
-
+.col-three
+	float: left
+	padding-left: 5%
+	width: 33%	
+	+r(w1250)
+		width: 50%
+		&:last-child
+			float: none
+			width: 100%
+			clear: both
+	&:first-child
+		padding-left: 0
+	.info
+		+r(w1250)
+			position: relative
+			text-align: center
+			padding-top: 20px
+			margin: 20px 0 
+			border: 0
+			&:before
+				content: ""
+				position: absolute
+				width: 63px
+				height: 2px
+				background: $black
+				top: 0
+				left: 50%
+				margin-left: -32px  
 // common blocks      
 
 .header
@@ -577,3 +604,4 @@ a
 	+tr(all .2s linear)
 	&:hover
 		+sp(logo-vintage-h) 
+
