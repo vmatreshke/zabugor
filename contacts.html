@@ -146,64 +146,82 @@
 	</div>
 	<div class="map">
 		<div class="l-center">
-			
+			<div class="map__popup">
+				<div class="title">Оставьте онлайн заявку</div>
+				<div class="input">
+					<input type="text" placeholder="Имя">
+				</div>
+				<div class="input">
+					<input type="tel" placeholder="Телефон">
+				</div>
+				<div class="input">
+					<input type="email" placeholder="e-mail">
+				</div>
+				<div class="input">
+					<textarea placeholder="сообщение"></textarea>
+				</div>
+				<div class="input">
+					<button class="link link_action is-liquid" type="submit">отправить</button>
+				</div>
+			</div>
 		</div>
 		<div id="map-canvas" class="map__body"></div>
 			<script>
-			  	function initialize() {
+			  	function initialize() {	
+			  		var stylez = [
+				         {
+				           featureType: "all",
+				           elementType: "all",
+				           stylers: [
+				             { saturation: -100 } // <-- THIS
+				           ]
+				         }
+				     ];
 				    var mapOptions = {
 				      	zoom: 15,
-				      	center: new google.maps.LatLng(59.437094, 24.741932),
+				      	center: new google.maps.LatLng(40.453230, -3.686963),
 				      	disableDefaultUI: true,
 				      	scrollwheel: true,
 				     	zoomControl: true,
 				    	zoomControlOptions: {
-				        	style: google.maps.ZoomControlStyle.DEFAULT
+				        	style: google.maps.ZoomControlStyle.DEFAULT,
+				        	mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
 				      	},
 				      	mapTypeId: google.maps.MapTypeId.ROADMAP
+
 				    }
 				    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+				    var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" }); 
+				    map.mapTypes.set('tehgrayz', mapType);
+     				map.setMapTypeId('tehgrayz');
 				    var image = 'img/marker.png';
-				    var myLatLng1 = new google.maps.LatLng(59.437094, 24.741932);
-				   	var myLatLng2 = new google.maps.LatLng(59.439713, 24.747082);
-				   	// var myLatLng3 = new google.maps.LatLng(40.739322, -73.993279);
-				   	// var myLatLng4 = new google.maps.LatLng(40.744101, -73.999716);
-				   	// var myLatLng5 = new google.maps.LatLng(40.743321,-73.993322);
-				    var marker = new google.maps.Marker({
+				    var myLatLng1 = new google.maps.LatLng(40.451834, -3.689549);
+				   	var myLatLng2 = new google.maps.LatLng(40.451409, -3.692778);
+
+				    var marker1 = new google.maps.Marker({
 					      position: myLatLng1,
 					      map: map,
 					      title: 'Uluru (Ayers Rock)', 
 					      icon: image
 					});
-					// var marker3 = new google.maps.Marker({
-					//       position: myLatLng3,
-					//       map: map,
-					//       title: 'Uluru (Ayers Rock)', 
-					//       icon: image
-					// });
-					// var marker4 = new google.maps.Marker({
-					//       position: myLatLng4,
-					//       map: map,
-					//       title: 'Uluru (Ayers Rock)', 
-					//       icon: image
-					// });
-					// var marker5 = new google.maps.Marker({
-					//       position: myLatLng5,
-					//       map: map,
-					//       title: 'Uluru (Ayers Rock)', 
-					//       icon: image
-					// });
+					var marker2 = new google.maps.Marker({
+					      position: myLatLng2,
+					      map: map,
+					      title: 'Uluru (Ayers Rock)', 
+					      icon: image
+					});
+
 				    var contentString1 =	'<div style="width:200px;height: 80px">'
-							+'<p>Street </p>'
-							+'<p>3rd. Floor </p>'
-							+'<p>Таллін, Естонія</p>'
-							+'<p>10010</p>'+
+							+'<p>KPMG </p>'
+							+'<p>Paseo de la Castellana, 95 </p>'
+							+'<p>28046 Madrid</p>'
+							+'<p>Іспанія</p>'+
 						'</div>';
 					var contentString2 =	'<div style="width:200px;height: 80px">'
-							+'<p>Street </p>'
-							+'<p>3rd. Floor </p>'
-							+'<p>Таллін, Естонія</p>'
-							+'<p>10010</p>'+
+							+'<p>Bríos Restaurant </p>'
+							+'<p>Av de Concha Espina, 4 </p>'
+							+'<p>28036 Madrid</p>'
+							+'<p>Іспанія</p>'+
 						'</div>';
 				  	var infowindow1 = new google.maps.InfoWindow({
 					    content: contentString1
@@ -212,10 +230,10 @@
 					    content: contentString2
 					});
 					google.maps.event.addListener(marker1, 'click', function(){
-					    infowindow1.open(map,marker);
+					    infowindow1.open(map,marker1);
 					});
 					google.maps.event.addListener(marker2, 'click', function(){
-					    infowindow2.open(map,marker);
+					    infowindow2.open(map,marker2);
 					});
 					//infowindow1.open(map,marker1);
 					//infowindow2.open(map,marker2);

@@ -33,6 +33,9 @@
 			&:before
 				height: 250px
 				top: -339px
+	&_form
+		.page-head__box 
+			padding: 0
 	&_propos
 		height: 697px
 		margin-bottom: 0
@@ -131,6 +134,20 @@
 	.title
 		text-align: center
 		margin-bottom: 14px
+.enter-box
+	display: table
+	width: 960px
+	table-layout: fixed
+	&__left
+		display: table-cell
+		padding: 30px
+		width: 740px 
+		background: #fff
+	&__right
+		display: table-cell
+		padding: 23px 27px
+		background: $brown   
+		color: #fff 
 .breadcrumbs
 	float: left
 	margin-top: 11px
@@ -191,7 +208,7 @@
 		.tel
 			text-align: left
 .content
-	overflow: hidden
+	+clr
 	img
 		margin-bottom: 26px		
 		max-width: 100%
@@ -225,6 +242,115 @@
 				color: $brown 
 				+r(w1250)
 					margin-right: 7px
+	hr
+		margin: 22px auto
+		border: 0 
+		height: 2px
+		background: $brown
+		width: 63px 
+		&:first-child
+			+ p
+				&:first-letter
+					float: left
+					position: relative
+					top: -3px
+					margin-right: 12px
+					font-size: 100px
+					line-height: 1
+					+rex 
+					color: $brown 
+					+r(w1250)
+						margin-right: 7px
+	table
+		margin-bottom: 30px 
+		thead
+			background: url(../img/dots-s-hor.png) 0 100% repeat-x
+		td,th
+			padding: 10px 20px 
+			text-align: left
+			background: url(../img/dots-s.png) 0 0 repeat-y 
+			&:first-child
+				padding-left: 0
+				background: none
+			&:last-child
+				padding-right: 0
+			span
+				display: block
+				padding-bottom: 7px
+				background: url(../img/dots-s-hor2.png) 0 100% repeat-x
+		th
+			font-weight: normal
+			font-size: 10px
+			+demic 
+			text-transform: uppercase
+		a
+			color: $brown 
+		strong
+			display: block
+			margin-bottom: 10px
+			font-weight: normal
+			text-transform: uppercase
+			color: $brown
+			+demic
+			font-size: 12px
+			
+	.tour-table
+		td
+			padding: 20px 
+			vertical-align: top
+			background: url(../img/dots-s-hor.png) 0 100% repeat-x, url(../img/dots-s.png) 0 0 repeat-y 
+			&:first-child
+				background: url(../img/dots-s-hor.png) 0 100% repeat-x  
+		&__day	
+			position: relative
+			display: inline-block
+			width: 85px
+			line-height: 1 
+			font-size: 100px
+			+rex
+			sup
+				position: absolute
+				top: 0
+				right: 0
+				text-transform: uppercase
+				font-size: 12px
+				+demic
+				color: $brown 
+		
+		p
+			+ img
+				margin: 0 0 7px
+	h1
+		position: relative
+		padding-top: 20px
+		font-weight: normal
+		margin-bottom: 30px
+		font-size: 30px
+		+rex
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0 
+			height: 2px
+			background: $brown
+			width: 63px 
+	ul
+		margin: 7px 0 33px
+		li
+			position: relative
+			margin-bottom: 5px
+			padding-left: 23px
+			&:before	
+				content: ""
+				position: absolute
+				left: 0
+				top: 9px
+				width: 6px
+				height: 6px
+				background: $brown
+				border-radius: 50%  
+
 .get-help
 	margin: 6px 0 70px
 	text-align: center
@@ -492,6 +618,8 @@
 	border-top: 2px solid $brown
 	padding-top: 15px 
 	+justify
+	&_no-border
+		border: 0
 	a
 		display: inline-block
 		vertical-align: middle
@@ -649,6 +777,18 @@
 		float: right
 	+ .post-nav
 		margin-bottom: 36px
+	&__links
+		overflow: hidden
+		text-align: right 
+		.share,
+		.link-more
+			display: inline-block
+			vertical-align: middle
+			float: none
+		.link-more
+			margin-left: 90px
+			&:first-child
+				margin-left: 0  
 .share
 	position: relative
 	&.is-active
@@ -865,9 +1005,26 @@
 			&:before,
 			&:after
 				background: $black
+	&_simple
+		.item__main
+			height: 90px
+			line-height: 90px
+			text-align: left
+			padding: 0
+			&:before,
+			&:after
+				display: none
+		.item__title
+			display: inline-block
+			vertical-align: middle
+			line-height: 1.2
+	&_right-img
+		.item__img
+			float: right
+			margin: 0 0 0 30px 
 	&__img
 		float: left
-		margin-right: 31px
+		margin-right: 30px
 		width: 158px
 		overflow: hidden
 		img
@@ -975,6 +1132,185 @@
 			height: 2px
 			background: $brown  
 .map
-	margin-bottom: -44px
-.map__body
-	height: 440px
+	margin: 55px 0 -44px
+	.l-center
+		position: relative
+	&__body
+		height: 440px 
+	&__popup
+		position: absolute
+		z-index: 2
+		top: 34px
+		right: 40px
+		padding: 35px 44px 31px
+		width: 422px
+		background: #fff  
+		.title
+			margin-bottom: 10px
+
+.title
+	&_border
+		padding-top: 28px
+		text-align: center
+		border-top: 2px solid $brown 
+.currency
+	ul
+		margin: 10px 0 0
+		span
+			display: inline-block
+			margin: 0 11px 
+.counter-list
+	counter-reset: list2
+	+ .btn_height
+		margin-left: 32px
+		width: 400px
+		text-align: center
+	li
+		position: relative
+		margin-bottom: 15px
+		padding-left: 32px
+		&:before
+			position: absolute
+			left: 0
+			top: 3px
+			font-size: 30px
+			+rex
+			color: $brown 
+			line-height: 1
+			counter-increment: list2  
+			content: counter(list2)
+.subscribe
+	margin: 0 0 37px 
+	padding: 33px 0 
+	background: #f3f2f2 
+	&__title
+		display: inline-block
+		vertical-align: middle
+		width: 300px
+		font-size: 12px
+		text-transform: uppercase
+		+demic
+	.input
+		display: inline-block
+		vertical-align: middle
+		margin: 0 18px 0 0
+		width: 181px 
+	.btn
+		vertical-align: middle
+		width: 245px
+.text-title-left
+	padding: 33px 0 
+	+clr
+	.title
+		float: left
+		padding-right: 50px
+		text-align: left
+		width: 410px
+	div
+		overflow: hidden
+	p
+		margin-bottom: 22px
+.important-text
+	margin: 0 0 50px 
+	border-top: 2px solid $brown 
+	border-bottom: 2px solid $brown 
+	padding: 25px 0 
+	font-size: 12px
+	text-transform: uppercase
+	+demic
+	text-align: center
+	span
+		color: $brown
+	.item_simple
+		margin: 0
+		img
+			margin-bottom: 0
+	+ .post-nav
+		margin: -40px 0 40px
+.text-title-right
+	padding: 33px 0 
+	+clr
+	.title
+		float: right
+		padding-left: 50px
+		text-align: left
+		width: 400px
+	div
+		overflow: hidden
+	p
+		margin-bottom: 22px
+
+.get-help
+	.title_border
+		margin-top: 50px
+		+ .btn
+			width: 430px
+			
+.rating
+	margin-bottom: 33px
+	width: 480px
+	li
+		position: relative
+		border-top: 2px solid $brown 
+		border-bottom: 2px solid $brown 
+		margin: 0 0 24px 66px
+		min-height: 76px
+		line-height: 76px
+		+rex
+		font-size: 20px
+		&:before
+			display: none
+	span
+		position: absolute
+		left: -66px
+		top: -8px
+		line-height: 1
+		font-size: 100px
+	a
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.6
+		color: $black 
+		
+.form
+	margin: 0 auto 
+	width: 325px
+	
+.page-404
+	background: url(../img/404.jpg) 50% 0 repeat 
+	+vertical
+	.out
+		display: inline-block
+		vertical-align: middle
+	.logo
+		display: inline-block
+		+s(logo-simple)
+	.error-404
+		padding: 64px 0 
+		font-size: 16px
+		span
+			position: relative  
+			display: inline-block
+			width: 710px
+			font-size: 300px
+			+rex
+			line-height: 1
+			sup
+				display: inline-block
+				position: relative 
+				top: 32px
+				left: -50px
+				vertical-align: top				
+				font-size: 30px
+				color: $brown 
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: -84px
+				+s(sun-large) 
+		div
+			padding: 5px 0 
+		.link
+			margin-left: 10px
+			min-width: 270px

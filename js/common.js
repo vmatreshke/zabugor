@@ -70,4 +70,15 @@ head.ready(function() {
 		return false;
 	});
 
+	$('.js-slider').slick({
+		slidesToShow: 1,
+		infinite: true,
+		speed: 300,
+		touchMove: true,
+		arrows: true,
+		dots: true,
+		autoplay: true,
+  		autoplaySpeed: 5000
+	});
+
 }); 
