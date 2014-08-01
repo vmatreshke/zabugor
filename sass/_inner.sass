@@ -209,6 +209,8 @@
 			text-align: left
 .content
 	+clr
+	&.content_spaced
+		margin: 26px 0 28px 0 
 	img
 		margin-bottom: 26px		
 		max-width: 100%
@@ -653,6 +655,15 @@
 			opacity: 0
 			visibility: hidden
 			+tr(all .2s linear)
+	&.post-nav_simple
+		text-align: center
+		border-top: none 
+		padding-top: 0
+		margin-bottom: 20px  
+		margin-top: -30px 
+		&:before,&:after
+			display: none
+			
 			
 .record
 	border-top: 2px solid $brown 
@@ -762,6 +773,13 @@
 
 .more-info
 	margin-bottom: 30px
+	text-align: center
+	&.more-info_small
+		margin: 0 auto
+		width: 400px  
+		margin-bottom: 30px 
+		outline: thick
+		margin-top: 10px 
 	.wrap
 		padding-bottom: 10px
 	.tel
@@ -1048,6 +1066,14 @@
 			top: 0
 		&:after
 			bottom: 0
+	&.item_center
+		.item__main
+			display: table
+			height: 89px 
+			width: 260px 
+			a
+				display: table-cell
+				vertical-align: middle
 	&__cat
 		display: block
 		text-transform: uppercase
@@ -1314,3 +1340,106 @@
 		.link
 			margin-left: 10px
 			min-width: 270px
+
+
+.hotel
+	+clr
+	+demic
+	margin-bottom: 16px 
+	.req
+		font-size: 18px 
+		vertical-align: top
+		color: #AF8E56 
+		margin-right: 7px 
+	.hotel__pic
+		float: left 
+		margin-right: 26px 
+	.hotel__content
+		font-size: 12px 
+		font-weight: bold
+		color: #AF8E56
+		overflow: hidden
+		a
+			color: #AF8E56
+			display: inline-block
+			border-bottom:  2px solid #AF8E56 
+			padding-bottom: 3px 
+			line-height: 1.7 
+			color: #AF8E56 
+			text-transform: uppercase
+			&:hover
+ 				color: #000 
+ 				border-color: #000 
+	&.hotel_req
+		.hotel__content 
+			a
+				color: #171717 
+ 
+.hnote
+	font-size: 12px 
+	color: #171717 
+	padding-left: 28px 
+	margin-bottom: 20px 
+	font-size: 12px 
+	text-transform: uppercase
+	margin-bottom: 82px 
+	border-left: 2px solid #000 
+	padding-right: 90px 
+	+demic
+	text-transform: uppercase
+	.req
+		font-size: 18px 
+		color: #AF8E56
+		margin-right: 4px  
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 2px   
+		top: 0  
+.l
+	+clr
+	.l-col1
+		float: left
+		width: 44% 
+	.l-col2
+		width: 44% 
+		float: right
+
+.otherc
+	border-top: 2px solid #AF8E56 
+	margin-bottom: 40px 
+	padding-top: 25px 
+	text-align: center
+	+demic
+	&__col
+		display: inline-block
+		margin: 0 25px
+		width: 247px  
+		text-transform: uppercase
+		font-size: 12px 
+		vertical-align: top
+		text-align: left
+		min-height: 141px 
+		position: relative
+		a
+			color: #AF8E56
+			text-decoration: none
+			display: block
+			border-bottom: 2px solid #AF8E56
+			padding: 10px 0
+			margin-bottom: 10px  
+			text-align: left
+			&:hover
+				color: #000 
+				border-color: #000
+	&__col_first 
+		margin-right: -30px 
+		p
+			padding-top: 10px 
+	&__moar
+		position: absolute
+		left: 0
+		bottom: 0  
+		display: inline-block
+		
