@@ -1,0 +1,37 @@
+.pace
+	-webkit-pointer-events: none
+	pointer-events: none
+	-webkit-user-select: none
+	-moz-user-select: none
+	user-select: none
+
+.pace .pace-progress
+	background-color: #2B2B2B
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	bottom: 0
+	-webkit-transition: width 1s
+	-moz-transition: width 1s
+	-o-transition: width 1s
+	transition: width 1s
+	.pace-done &
+		display: block !important
+		opacity: 0 !important
+		+transition-delay(1s !important)
+		+transition(all .3s linear !important)
+.pace__overlay
+	background: #131313 url(../img/llogo.png) no-repeat 50% 50%
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 900
+	.pace-done &
+		display: none 
+.pace-inactive
+	// opacity: 0 
+	// +transition(all .3s linear)
+	// +transition-delay(.4s)

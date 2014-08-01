@@ -913,3 +913,11 @@ a { text-decoration: none; }
 .slick-dots li:before { display: none; }
 .slick-dots li.slick-active button { background: none; box-shadow: 0 0 0 1px white; }
 .slick-dots button { display: block; width: 7px; height: 7px; background: white; cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; }
+
+.pace { -webkit-pointer-events: none; pointer-events: none; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+
+.pace .pace-progress { background-color: #2b2b2b; position: fixed; z-index: 1000; top: 0; left: 0; bottom: 0; -webkit-transition: width 1s; -moz-transition: width 1s; -o-transition: width 1s; transition: width 1s; }
+.pace-done .pace .pace-progress { display: block !important; opacity: 0 !important; -moz-transition-delay: 1s !important; -o-transition-delay: 1s !important; -webkit-transition-delay: 1s !important; transition-delay: 1s !important; -moz-transition: all 0.3s linear !important; -o-transition: all 0.3s linear !important; -webkit-transition: all 0.3s linear; -webkit-transition-delay: !important; transition: all 0.3s linear !important; }
+
+.pace__overlay { background: #131313 url(../img/llogo.png) no-repeat 50% 50%; position: fixed; top: 0; left: 0; bottom: 0; right: 0; z-index: 900; }
+.pace-done .pace__overlay { display: none; }
