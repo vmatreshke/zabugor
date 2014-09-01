@@ -18,12 +18,12 @@
 			height: 70px
 			width: 4px
 			background: url(../img/dots-w.png) 0 0 repeat 	 
-	&_small-box
+	&_small-box 
 		.page-head__box
 			margin-left: -327px
 			width: 654px
 	&_width-box
-		.page-head__box
+		.page-head__box 
 			margin-left: -480px
 			width: 960px
 	&_mod
@@ -357,8 +357,17 @@
 				border-radius: 50%  
 
 .get-help
-	margin: 6px 0 70px
+	max-width: 415px
+	margin: 28px auto 70px
 	text-align: center
+	&__title
+		font-size: 12px
+		color: $brown
+		text-transform: uppercase
+		+demic 
+	img
+		margin: 0 0 15px 
+		max-width: 100%
 	p
 		margin-bottom: 20px
 	.tel
@@ -370,7 +379,8 @@
 		margin-left: 29px
 		&:first-child
 			margin-left: 0
-			
+	.btn
+		margin-top: 40px
 .text-cols
 	+column-count(2)
 	+column-gap(85px)
@@ -1347,6 +1357,8 @@
 .form
 	margin: 0 auto 
 	width: 325px
+	&_rss
+		margin-top: 10px
 	.input
 		.link
 			margin-top: 15px
@@ -1358,7 +1370,7 @@
 		vertical-align: middle
 	.logo
 		display: inline-block
-		+s(logo-simple)
+		+s(logo-simple) 
 	.error-404
 		padding: 64px 0 
 		font-size: 16px

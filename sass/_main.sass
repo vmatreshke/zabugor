@@ -1,6 +1,6 @@
 .index-page
-	background-position:  50% 0
-	background-repeat: no-repeat  
+	//background-position:  50% 0
+	//background-repeat: no-repeat  
 	.header
 		a
 			color: #fff 
@@ -43,7 +43,18 @@
 		.menu-key
 			span
 				color: #000 
-
+.holder
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	height: 680px
+	text-align: center
+	z-index: -1
+	overflow: hidden
+	video
+		width: 100%
+		height: auto
 .main-promo
 	position: relative
 	padding: 90px 0 111px
@@ -95,35 +106,27 @@
 			+tr(box-shadow .2s linear)
 			&:hover
 				box-shadow: 0 0 0 5px #fff
-				i
-					bottom: 13px
-					&:after
-						//top: -20px
-						opacity: 1
-						visibility: visible
 			i
 				position: absolute
+				top: 5px
 				left: 50%
 				margin-left: -9px
-				bottom: 18px
+				+animation(anim-bg 2s linear infinite)
 				+s(angle)
-				+tr(all .2s linear)
-				
-				&:before,
-				&:after
+				&:before
 					content: "" 
-					position: absolute 
-					left: 0
+					position: absolute
+					top: 10px 
 					left: 0
 					+s(angle)
-					+tr(all .2s linear)
-				&:before
-					top: -10px
-				&:after
-					opacity: 0
-					top: -20px
-					visibility: hidden
 					
++keyframes(anim-bg)
+	0%
+		+translateY(0)	
+	50%
+		+translateY(30px)
+	100%
+		+translateY(0)
 .soc-counter
 	&__item
 		display: inline-block
