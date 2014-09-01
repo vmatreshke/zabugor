@@ -113,7 +113,7 @@ a { text-decoration: none; }
 .menu-key i:before, .menu-key i:after { content: ""; position: absolute; height: 2px; background: inherit; left: 0; right: 0; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .menu-key i:before { top: -8px; }
 .menu-key i:after { bottom: -8px; }
-.menu-key span { display: inline-block; vertical-align: middle; color: white; font-size: 12px; font-family: "futurademic", Arial, sans-serif; margin-left: 7px; text-transform: uppercase; }
+.menu-key span { display: inline-block; vertical-align: middle; color: black; font-size: 12px; font-family: "futurademic", Arial, sans-serif; margin-left: 7px; text-transform: uppercase; }
 
 .nav { position: fixed; top: 0; -moz-transform: translateY(-150px); -ms-transform: translateY(-150px); -webkit-transform: translateY(-150px); transform: translateY(-150px); left: 0; right: 0; z-index: 99; background: white; border-bottom: 1px solid #efeeee; -moz-transition: -moz-transform 0.2s; -o-transition: -o-transform 0.2s; -webkit-transition: -webkit-transform 0.2s; transition: transform 0.2s; }
 .nav .l-center { position: relative; padding: 15px 40px 7px; *zoom: 1; }
@@ -338,8 +338,6 @@ a { text-decoration: none; }
 
 .index-page { background-position: 50% 0; background-repeat: no-repeat; }
 .index-page .header a { color: white; }
-.index-page .header .btn { background: white; color: #101010; border: 2px solid white; }
-.index-page .header .btn:hover { color: white; }
 .index-page .header .tel { color: white; }
 .index-page .header .tel i { border-color: rgba(255, 255, 255, 0.6); }
 .index-page .header__left .menu-key i { background: white; }
@@ -347,6 +345,10 @@ a { text-decoration: none; }
 .index-page .header__nav a:after, .index-page .header__nav a:before { background: white; background: rgba(255, 255, 255, 0.6); }
 .index-page .header__lang a:before, .index-page .header__lang a:after { background: white; background: rgba(255, 255, 255, 0.6); }
 .index-page .header__logo { background: url('../img/icons-s1cd5f079c0.png') 0 -182px no-repeat; width: 219px; height: 106px; }
+.index-page .menu-key span { color: white; }
+.index-page .header__main .btn { background: white; color: #101010; border: 2px solid white; }
+.index-page .header__main .btn:hover { color: white; }
+.index-page .nav .menu-key span { color: black; }
 
 .main-promo { position: relative; padding: 90px 0 111px; min-height: 524px; color: white; font-size: 16px; font-family: "futurabookc", Arial, sans-serif; text-align: center; }
 .main-promo hr { margin: 22px auto; width: 63px; height: 2px; background: white; border: 0; background: rgba(255, 255, 255, 0.6); }
