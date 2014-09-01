@@ -8,14 +8,14 @@
 		left: 0
 		right: 0
 		bottom: 0
-		height: 72px
+		height: 112px
 		&:after
 			content: ""
 			position: absolute
 			left: 50%
 			bottom: -3px
 			margin-left: -2px
-			height: 30px
+			height: 70px
 			width: 4px
 			background: url(../img/dots-w.png) 0 0 repeat 	 
 	&_small-box
@@ -84,7 +84,7 @@
 	&__box
 		position: absolute
 		left: 50%
-		top: 222px
+		top: 182px
 		z-index: 2
 		margin-left: -420px
 		padding: 26px 50px 0 44px 
@@ -93,7 +93,7 @@
 		&:before
 			content: ""
 			position: absolute
-			height: 125px 
+			height: 85px 
 			top: -217px
 			left: 50% 
 			margin-left: -2px
@@ -102,7 +102,7 @@
 		&:after
 			content: ""
 			position: absolute
-			top: -89px
+			top: -129px
 			left: 50%
 			margin-left: -31px
 			+s(sun-white)
@@ -265,11 +265,13 @@
 						margin-right: 7px
 	table
 		margin-bottom: 30px 
+		font-size: 14px
 		thead
-			background: url(../img/dots-s-hor.png) 0 100% repeat-x
+			background: url(../img/dots-s-hor.png) 4px 100% repeat-x
 		td,th
-			padding: 10px 20px 
+			padding: 5px 20px 
 			text-align: left
+			max-width: 300px
 			background: url(../img/dots-s.png) 0 0 repeat-y 
 			&:first-child
 				padding-left: 0
@@ -281,6 +283,7 @@
 				padding-bottom: 7px
 				background: url(../img/dots-s-hor2.png) 0 100% repeat-x
 		th
+			padding-bottom: 12px
 			font-weight: normal
 			font-size: 10px
 			+demic 
@@ -371,6 +374,7 @@
 .text-cols
 	+column-count(2)
 	+column-gap(85px)
+	+gpu
 	p
 		margin-bottom: 22px
 	span
@@ -460,7 +464,7 @@
 				display: block
 	&__title
 		margin-bottom: 9px
-		font-size: 14px
+		font-size: 12px
 		text-transform: uppercase
 		+demic
 		color: $brown 
@@ -780,6 +784,8 @@
 		margin-bottom: 30px 
 		outline: thick
 		margin-top: 10px 
+	&_left-align
+		text-align: left
 	.wrap
 		padding-bottom: 10px
 	.tel
@@ -796,7 +802,7 @@
 	+ .post-nav
 		margin-bottom: 36px
 	&__links
-		overflow: hidden
+		float: right
 		text-align: right 
 		.share,
 		.link-more
@@ -877,8 +883,14 @@
 	width: 33%
 	min-height: 176px
 	font-size: 16px
+	color: $black 
+	+tr(color .2s)
 	+r(w1250)	
 		padding: 27px 25px 25px 75px
+	&:hover
+		color: $brown
+		&:before
+			color: $black 
 	&:first-child
 		margin-left: 0
 	&:after
@@ -900,6 +912,7 @@
 		color: $brown
 		text-transform: uppercase
 		+demic
+		+tr(color .2s)
 	&__text	
 		overflow: hidden
 		position: relative
@@ -916,6 +929,7 @@
 		line-height: 1
 		counter-increment: list3  
 		content: counter(list3)
+		+tr(color .2s)
 		+r(w1250)	
 			left: 13px
 			
@@ -923,6 +937,7 @@
 	position: absolute
 	top: 0
 	right: 0
+	z-index: 3
 	&.is-active
 		.subnav__main
 			top: 0
@@ -930,15 +945,31 @@
 			visibility: visible
 	&__link
 		display: inline-block
+		position: relative
+		z-index: 1
 		padding: 17px 41px
 		background: $brown
 		color: #fff
 		text-transform: uppercase
 		+demic
 		font-size: 12px   
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			z-index: -1
+			width: 100%
+			height: 0
+			background: $black 
+			+tr(all .2s linear)
+		&:hover
+			&:after
+				height: 100%
 	&__main
 		position: absolute
 		opacity: 0
+		z-index: 3
 		visibility: hidden
 		top: -400px
 		right: 0
@@ -997,6 +1028,12 @@
 .sort
 	text-align: center
 	margin: 22px 0 28px 
+	&_mod
+		.link-more
+			&.is-active
+				&:before,
+				&:after
+					display: none
 	.link-more
 		margin-left: 42px
 		&:first-child
@@ -1253,6 +1290,8 @@
 			margin-bottom: 0
 	+ .post-nav
 		margin: -40px 0 40px
+	+ .sort_mod
+		margin-top: -36px
 .text-title-right
 	padding: 33px 0 
 	+clr
@@ -1284,24 +1323,33 @@
 		line-height: 76px
 		+rex
 		font-size: 20px
+		+tr(border .2s)
 		&:before
 			display: none
+		&:hover
+			border-color: $black
+			a, span
+				color: $brown 
 	span
 		position: absolute
 		left: -66px
 		top: -8px
 		line-height: 1
 		font-size: 100px
+		+tr(color .2s)
 	a
 		display: inline-block
 		vertical-align: middle
 		line-height: 1.6
 		color: $black 
+		+tr(color .2s)
 		
 .form
 	margin: 0 auto 
 	width: 325px
-	
+	.input
+		.link
+			margin-top: 15px
 .page-404
 	background: url(../img/404.jpg) 50% 0 repeat 
 	+vertical

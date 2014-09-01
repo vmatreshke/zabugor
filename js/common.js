@@ -38,12 +38,30 @@ head.ready(function() {
 
 	$(".js-scroll-to").on("click", function(){
 		var section = $(this).attr("data-section");
+		var attrMargin = $(this).attr("data-margin");
+		var navHeight = +$(".js-nav").outerHeight();
+		if (attrMargin == undefined ) {
+			var margin = 0;
+		}
+		else {
+			var margin = +attrMargin;
+		}
 		if (section.length > 0) {
 			$('html, body').animate({
-	            scrollTop: ($("."+section)).offset().top-70
+	            scrollTop: $("."+section).offset().top + margin - navHeight
 	        }, 500);
 		}
 		
+		return false;
+	});
+	$(".js-scroll-to-country ul a").on("click", function(){
+		var country = $(this).attr("data-country");
+		var navHeight = +$(".js-nav").outerHeight();
+		if (country.length > 0) {
+			$('html, body').animate({
+	            scrollTop: $("."+country).offset().top - navHeight
+	        }, 500);
+		}
 		return false;
 	});
 	$(".js-share-link").on("click", function(event){

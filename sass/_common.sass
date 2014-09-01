@@ -294,7 +294,7 @@ a
 	z-index: 99
 	background: #fff
 	border-bottom: 1px solid #efeeee 
-	+tr(transform .2s ceaser($easeOutBack))
+	+tr(transform .2s)
 	.l-center
 		position: relative
 		padding: 15px 40px 7px 
@@ -348,7 +348,7 @@ a
 	text-align: center
 	background: #fff 
 	visibility: hidden
-	+tr(all .2s linear)
+	+tr(transform .2s linear)
 	&.is-visible
 		+transform(translateX(0))
 		visibility: visible
@@ -401,7 +401,7 @@ a
 	visibility: hidden
 	background: rgba(#000,.3) 
 	opacity: 0
-	+tr(all .2s linear) 
+	+tr(opacity .2s linear) 
 	&.is-visible
 		visibility: visible
 		opacity: 1 
@@ -442,14 +442,14 @@ a
 			color: $brown 
 	&__subscribe
 		+justify
-		+r(w1250)
+		+r(w1350)
 		span
 			font-size: 14px
 			display: inline-block
 			vertical-align: middle
 			margin-right: 10px
 			text-align: left
-			+r(w1250)
+			+r(w1350)
 				max-width: 210px
 		.link
 			vertical-align: middle
@@ -530,6 +530,9 @@ a
 		text-transform: uppercase
 		a
 			color: $brown 
+			+tr(color .2s)
+			&:hover	
+				color: #fff 
 	.tel
 		display: block
 		margin: 33px 0 0 
@@ -544,6 +547,11 @@ a
 		display: table-cell
 		vertical-align: top
 		width: 50%
+		a
+			color: #fff 
+			+tr(all .2s)
+			&:hover
+				color: $brown 
 	&__copy
 		padding: 24px 0 0 
 		a
