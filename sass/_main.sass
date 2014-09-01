@@ -233,7 +233,15 @@
 	margin: 0 auto 
 	height: 535px
 	width: 3px
-	background: url(../img/dots.png) 11px 0 repeat
+	opacity: 0
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		height: 0
+		width: 3px
+		+tr(all 1s)
+		background: url(../img/dots.png) 11px 0 repeat
 	&:after
 		content: ""
 		position: absolute
@@ -241,7 +249,17 @@
 		top: 50%
 		left: 50%
 		+s(sun-full) 
-
+	&.is-visible
+		&:before
+			height: 100%
+.inview-item
+	position: relative
+	opacity: 0
+	+translateY(200px)
+	+transition(opacity 1s, transform 1s)
+	&.is-visible
+		opacity: 1
+		+translateY(0)
 .about
 	position: relative
 	margin: 0 -40px 

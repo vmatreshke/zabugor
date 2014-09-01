@@ -99,4 +99,19 @@ head.ready(function() {
   		autoplaySpeed: 5000
 	});
 
+	$('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+	  if (isInView) {
+	    
+	    if (visiblePartY == 'top') {
+	      $(this).addClass("is-visible");
+	    } else if (visiblePartY == 'bottom') {
+	      $(this).addClass("is-visible");
+	    } else {
+	      // whole part of element is visible
+	    }
+	  } else {
+	    // element has gone out of viewport
+	  }
+	});
+
 }); 

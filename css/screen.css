@@ -413,8 +413,13 @@ a { text-decoration: none; }
 .more_white .more__btn button:hover { box-shadow: 0 0 0 6px white; }
 .more_white .more__btn i { background: url('../img/icons-s018305508c.png') 0 -21px no-repeat; width: 18px; height: 11px; }
 
-.dots { position: relative; margin: 0 auto; height: 535px; width: 3px; background: url(../img/dots.png) 11px 0 repeat; }
+.dots { position: relative; margin: 0 auto; height: 535px; width: 3px; opacity: 0; }
+.dots:before { content: ""; position: absolute; top: 0; height: 0; width: 3px; -moz-transition: all 1s; -o-transition: all 1s; -webkit-transition: all 1s; transition: all 1s; background: url(../img/dots.png) 11px 0 repeat; }
 .dots:after { content: ""; position: absolute; margin: -30px 0 0 -31px; top: 50%; left: 50%; background: url('../img/icons-s018305508c.png') 0 -1108px no-repeat; width: 62px; height: 61px; }
+.dots.is-visible:before { height: 100%; }
+
+.inview-item { position: relative; opacity: 0; -moz-transform: translateY(200px); -ms-transform: translateY(200px); -webkit-transform: translateY(200px); transform: translateY(200px); -moz-transition: opacity 1s, -moz-transform 1s; -o-transition: opacity 1s, -o-transform 1s; -webkit-transition: opacity 1s, -webkit-transform 1s; transition: opacity 1s, transform 1s; }
+.inview-item.is-visible { opacity: 1; -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
 
 .about { position: relative; margin: 0 -40px; padding-bottom: 91px; min-height: 697px; background: url(../img/about.png) 50% 0 no-repeat; }
 @media only screen and (max-width: 1250px) { .about { margin: 0 -20px; } }
