@@ -571,3 +571,63 @@ a
 	&:hover
 		+sp(logo-vintage-h) 
 
+.preloader
+	position: fixed
+	z-index: 100
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: #000 
+	opacity: 1
+	+tr(opacity .5s)
+	&.is-opacity
+		opacity: 0
+	&.is-hidden
+		visibility: hidden
+	&:after,
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+	img
+		margin: -85px 0 0 -85px 
+		+animation(sun 10s linear infinite)
+	&:after
+		content: ""
+		margin: -8px 0 0 -41px 
+		+s(preload-logo)
++keyframes(sun)
+	0%
+		opacity: 1
+		+transform(scale(1.1) rotate(0))
+	10%
+		opacity: .5
+		+transform(scale(1) rotate(36deg))
+	20%
+		opacity: 1
+		+transform(scale(1.2) rotate(72deg))
+	30%
+		opacity: .5
+		+transform(scale(1) rotate(108deg))
+	40%
+		opacity: 1
+		+transform(scale(1.1) rotate(144deg))
+	50%
+		opacity: .5
+		+transform(scale(1) rotate(180deg))
+	60%
+		opacity: 1
+		+transform(scale(1.1) rotate(216deg))
+	70%
+		opacity: .5
+		+transform(scale(1) rotate(252deg))
+	80%
+		opacity: 1
+		+transform(scale(1.1) rotate(278deg))
+	90%
+		opacity: .5
+		+transform(scale(1.1) rotate(314deg))
+	100%
+		opacity: 1
+		+transform(scale(1) rotate(360deg))

@@ -6,7 +6,12 @@ head.ready(function() {
 		$(".js-drop").removeClass("is-active");
 	});
 
-
+	setTimeout(function(){
+		$(".js-preloader").addClass("is-opacity");
+	}, 2000);
+	setTimeout(function(){
+		$(".js-preloader").addClass("is-hidden");
+	}, 2500);
 
 	$(".js-menu-key").on("click", function(event){
 		$(".js-overlay-menu, .js-menu").addClass("is-visible");
@@ -113,5 +118,8 @@ head.ready(function() {
 	    // element has gone out of viewport
 	  }
 	});
+
+	
+		
 
 }); 
