@@ -111,6 +111,7 @@ head.ready(function() {
 	      $(this).addClass("is-visible");
 	    } else if (visiblePartY == 'bottom') {
 	      $(this).addClass("is-visible");
+	      $(this).addClass("is-visible-bottom");
 	    } else {
 	      // whole part of element is visible
 	    }

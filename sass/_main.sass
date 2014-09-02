@@ -57,7 +57,7 @@
 		height: auto
 .main-promo
 	position: relative
-	padding: 90px 0 111px
+	padding: 65px 0 111px
 	min-height: 524px
 	color: #fff
 	font-size: 16px
@@ -83,7 +83,7 @@
 		position: absolute
 		left: 0
 		right: 0
-		bottom: 0
+		bottom: 50px
 		height: 110px
 		text-align: center
 		.soc-counter
@@ -228,6 +228,10 @@
 					box-shadow: 0 0 0 6px #fff
 			i
 				+s(angle)
+	a
+		color: #fff
+		&:hover
+			text-decoration: underline
 .dots
 	position: relative
 	margin: 0 auto 
@@ -240,7 +244,7 @@
 		top: 0
 		height: 0
 		width: 3px
-		+tr(all 1s)
+		+transition(all 2s)
 		background: url(../img/dots.png) 11px 0 repeat
 	&:after
 		content: ""
@@ -249,17 +253,60 @@
 		top: 50%
 		left: 50%
 		+s(sun-full) 
+		opacity: 0
+		+translateY(-200px)
+		+transition(opacity 1s, transform 1s)
 	&.is-visible
+		opacity: 1
 		&:before
 			height: 100%
+		&:after
+			opacity: 1
+			+translateY(0)
 .inview-item
 	position: relative
 	opacity: 0
 	+translateY(200px)
 	+transition(opacity 1s, transform 1s)
+	.has-dots
+		&:before
+			height: 0
+			+transition(all 1s)
+		&:after
+			+translateY(100px)
+			+transition(opacity 1s, transform 1s)
+	&.page-head_propos
+		.page-head__box
+			&:before
+				height: 0
+				+transition(all 1s)
+			&:after
+				+translateY(100px)
+				+transition(opacity 1s, transform 1s)
+	+ .dots-line_small
+		height: 126px
+		&:before
+			height: 1px
 	&.is-visible
 		opacity: 1
 		+translateY(0)
+		.has-dots
+			&:before
+				height: 109px
+			&:after
+				+translateY(0)
+		.page-head__box
+			&:before
+				height: 100px
+			&:after
+				+translateY(0)
+
+	&.is-visible-bottom
+		+ .dots-line_small
+			&:before
+				height: 126px
+		
+		
 .about
 	position: relative
 	margin: 0 -40px 
