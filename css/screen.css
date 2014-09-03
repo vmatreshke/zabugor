@@ -826,22 +826,31 @@ a { text-decoration: none; }
 .info-box { margin: 14px 0; text-align: center; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; font-size: 12px; }
 
 .propos-wrap { position: absolute; top: 388px; left: 0; right: 0; }
-.propos-wrap .l-center { counter-reset: list3; padding: 0; }
+.propos-wrap .l-center { padding: 0; }
 .propos-wrap .l-center:before, .propos-wrap .l-center:after { content: ""; position: absolute; top: 0; bottom: 0; width: 2000px; background: white; }
 .propos-wrap .l-center:before { left: -1980px; }
 .propos-wrap .l-center:after { right: -1980px; }
 .propos-wrap .wrap { display: table; width: 100%; table-layout: fixed; }
 
-.propos { position: relative; display: table-cell; vertical-align: top; margin-left: 5px; padding: 27px 25px 45px 110px; width: 33%; min-height: 176px; font-size: 16px; color: #101010; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
+.propos { position: relative; display: table-cell; vertical-align: top; margin-left: 5px; width: 33%; height: 176px; font-size: 16px; color: #101010; }
 @media only screen and (max-width: 1250px) { .propos { padding: 27px 25px 25px 75px; } }
 .propos:hover { color: #bd904d; }
 .propos:hover:before { color: #101010; }
 .propos:first-child { margin-left: 0; }
-.propos:after { content: ""; position: absolute; top: 0; bottom: 0; left: 3px; right: 2px; background: white; z-index: 0; }
+.propos__counter { position: absolute; top: 33px; left: 39px; font-size: 100px; font-family: "rex_bold", Arial, sans-serif; z-index: 2; color: #bd904d; line-height: 1; font-style: normal; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
+@media only screen and (max-width: 1250px) { .propos__counter { left: 13px; } }
 .propos__title { display: inline-block; position: relative; z-index: 2; overflow: hidden; min-height: 32px; font-size: 12px; color: #bd904d; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .propos__text { overflow: hidden; position: relative; z-index: 2; }
-.propos:before { content: ""; position: absolute; top: 33px; left: 39px; font-size: 100px; font-family: "rex_bold", Arial, sans-serif; z-index: 2; color: #bd904d; line-height: 1; counter-increment: list3; content: counter(list3); -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
-@media only screen and (max-width: 1250px) { .propos:before { left: 13px; } }
+.propos .card3d__side { padding: 27px 25px 45px 110px; }
+@media only screen and (max-width: 1250px) { .propos .card3d__side { padding: 27px 25px 25px 75px; } }
+
+.card3d { -moz-perspective: 800px; -webkit-perspective: 800px; perspective: 800px; }
+.card3d:hover .card3d__in { -moz-transform: rotateY(180deg); -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+.card3d__in { position: relative; width: 100%; height: 100%; -moz-transition: -moz-transform 0.3s linear; -o-transition: -o-transform 0.3s linear; -webkit-transition: -webkit-transform 0.3s linear; transition: transform 0.3s linear; -moz-transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+.card3d .card3d__side { display: block; position: absolute; width: 100%; height: 100%; -moz-backface-visibility: hidden; -webkit-backface-visibility: hidden; backface-visibility: hidden; will-change: transform; }
+.card3d .card3d__side.is-front { background: white; }
+.card3d .card3d__side.is-back { background: #bd904d; color: white; -moz-transform: rotateY(180deg); -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+.card3d .card3d__side.is-back .propos__counter, .card3d .card3d__side.is-back .propos__title { color: white; }
 
 .subnav { position: absolute; top: 0; right: 0; z-index: 3; }
 .subnav.is-active .subnav__main { top: 0; opacity: 1; visibility: visible; }

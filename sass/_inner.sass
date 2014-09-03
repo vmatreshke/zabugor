@@ -143,7 +143,7 @@
 	&__right
 		display: table-cell
 		padding: 23px 27px
-		background: $brown   
+		background: $brown	 
 		color: #fff 
 .breadcrumbs
 	float: left
@@ -302,7 +302,7 @@
 			vertical-align: top
 			background: url(../img/dots-s-hor.png) 0 100% repeat-x, url(../img/dots-s.png) 0 0 repeat-y 
 			&:first-child
-				background: url(../img/dots-s-hor.png) 0 100% repeat-x  
+				background: url(../img/dots-s-hor.png) 0 100% repeat-x	
 		&__day	
 			position: relative
 			display: inline-block
@@ -351,7 +351,7 @@
 				width: 6px
 				height: 6px
 				background: $brown
-				border-radius: 50%  
+				border-radius: 50%	
 
 .get-help
 	margin: 28px auto 70px
@@ -460,7 +460,7 @@
 			+rex
 			line-height: 1
 			color: $brown 
-			counter-increment: list1  
+			counter-increment: list1	
 			content: counter(list1)
 		&:nth-child(1),
 		&:nth-child(2),
@@ -583,7 +583,7 @@
 			left: 0
 			right: 0
 			height: 2px
-			background: $brown  
+			background: $brown	
 		&:after
 			bottom: 0
 		&:before
@@ -626,7 +626,7 @@
 			width: 6px
 			height: 6px
 			background: $brown
-			border-radius: 50%   
+			border-radius: 50%	 
 			
 .post-nav
 	border-top: 2px solid $brown
@@ -659,7 +659,7 @@
 			left: 0
 			right: 0
 			height: 2px
-			background: $brown  
+			background: $brown	
 		&:after
 			bottom: 0
 		&:before
@@ -671,7 +671,7 @@
 		text-align: center
 		border-top: none 
 		padding-top: 0
-		margin-bottom: 20px  
+		margin-bottom: 20px	
 		margin-top: -30px 
 		&:before,&:after
 			display: none
@@ -730,7 +730,7 @@
 .article-wrap
 	padding: 37px 0 12px
 	counter-reset: list2
-	&.has-border   
+	&.has-border	 
 		margin-bottom: 40px
 		padding-bottom: 50px
 		border-bottom: 2px solid $brown 
@@ -780,7 +780,7 @@
 			+rex
 			color: $brown 
 			font-size: 100px
-			counter-increment: list2  
+			counter-increment: list2	
 			content: counter(list2)
 
 .more-info
@@ -788,7 +788,7 @@
 	text-align: center
 	&.more-info_small
 		margin: 0 auto
-		width: 400px  
+		width: 400px	
 		margin-bottom: 30px 
 		outline: thick
 		margin-top: 10px 
@@ -820,7 +820,7 @@
 		.link-more
 			margin-left: 90px
 			&:first-child
-				margin-left: 0  
+				margin-left: 0	
 .share
 	position: relative
 	&.is-active
@@ -864,7 +864,6 @@
 	left: 0
 	right: 0
 	.l-center
-		counter-reset: list3
 		padding: 0
 		&:before,
 		&:after
@@ -887,12 +886,10 @@
 	display: table-cell
 	vertical-align: top
 	margin-left: 5px
-	padding: 27px 25px 45px 110px
 	width: 33%
-	min-height: 176px
+	height: 176px
 	font-size: 16px
 	color: $black 
-	+tr(color .2s)
 	+r(w1250)	
 		padding: 27px 25px 25px 75px
 	&:hover
@@ -901,15 +898,19 @@
 			color: $black 
 	&:first-child
 		margin-left: 0
-	&:after
-		content: ""
+	&__counter
 		position: absolute
-		top: 0
-		bottom: 0
-		left: 3px
-		right: 2px
-		background: #fff 
-		z-index: 0
+		top: 33px
+		left: 39px
+		font-size: 100px
+		+rex
+		z-index: 2
+		color: $brown	
+		line-height: 1
+		font-style: normal
+		+tr(color .2s)
+		+r(w1250)	
+			left: 13px
 	&__title
 		display: inline-block
 		position: relative
@@ -925,23 +926,41 @@
 		overflow: hidden
 		position: relative
 		z-index: 2
-	&:before
-		content: ""
-		position: absolute
-		top: 33px
-		left: 39px
-		font-size: 100px
-		+rex
-		z-index: 2
-		color: $brown  
-		line-height: 1
-		counter-increment: list3  
-		content: counter(list3)
-		+tr(color .2s)
+	.card3d__side
+		padding: 27px 25px 45px 110px
 		+r(w1250)	
-			left: 13px
-			
-.subnav
+			padding: 27px 25px 25px 75px
+
+.card3d
+	+perspective(800px)
+	&:hover
+		.card3d__in
+			+rotateY(180deg)
+	&__in
+		position: relative
+		width: 100%
+		height: 100%
+		+transition(transform .3s linear)
+		+transform-style(preserve-3d)
+	.card3d__side
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		+backface-visibility(hidden)
+		will-change: transform
+		// front
+		&.is-front
+			background: #fff
+		// backface
+		&.is-back
+			background: $brown
+			color: #fff 
+			+rotateY(180deg)
+			.propos__counter,
+			.propos__title
+				color: #fff 
+.subnav 
 	position: absolute
 	top: 0
 	right: 0
@@ -949,7 +968,7 @@
 	&.is-active
 		.subnav__main
 			top: 0
-			opacity: 1   
+			opacity: 1	 
 			visibility: visible
 	&__link
 		display: inline-block
@@ -960,7 +979,7 @@
 		color: #fff
 		text-transform: uppercase
 		+demic
-		font-size: 12px   
+		font-size: 12px	 
 		&:after
 			content: "" 
 			position: absolute
@@ -1010,7 +1029,7 @@
 				width: 0
 				height: 2px
 				bottom: 0
-				background: #fff  
+				background: #fff	
 				visibility: hidden
 				opacity: 0
 				+tr(all .2s linear)		
@@ -1022,7 +1041,7 @@
 					width: 100% 
 					height: 2px
 					top: 0
-					background: #fff  
+					background: #fff	
 				&:after 
 					visibility: visible
 					opacity: 1
@@ -1201,7 +1220,7 @@
 			right: 0
 			bottom: 0
 			height: 2px
-			background: $brown  
+			background: $brown	
 .map
 	margin: 55px 0 -44px
 	.l-center
@@ -1215,7 +1234,7 @@
 		right: 40px
 		padding: 35px 44px 31px
 		width: 422px
-		background: #fff  
+		background: #fff	
 		.title
 			margin-bottom: 10px
 
@@ -1248,7 +1267,7 @@
 			+rex
 			color: $brown 
 			line-height: 1
-			counter-increment: list2  
+			counter-increment: list2	
 			content: counter(list2)
 .subscribe
 	margin: 0 0 37px 
@@ -1375,7 +1394,7 @@
 		padding: 64px 0 
 		font-size: 16px
 		span
-			position: relative  
+			position: relative	
 			display: inline-block
 			width: 710px
 			font-size: 300px
@@ -1422,7 +1441,7 @@
 		a
 			color: #AF8E56
 			display: inline-block
-			border-bottom:  2px solid #AF8E56 
+			border-bottom:	2px solid #AF8E56 
 			padding-bottom: 3px 
 			line-height: 1.7 
 			color: #AF8E56 
@@ -1450,13 +1469,13 @@
 	.req
 		font-size: 18px 
 		color: #AF8E56
-		margin-right: 4px  
+		margin-right: 4px	
 	&:before
 		position: absolute
 		top: 0
 		left: 0
-		width: 2px   
-		top: 0  
+		width: 2px	 
+		top: 0	
 .l
 	+clr
 	margin-top: 44px 
@@ -1476,7 +1495,7 @@
 	&__col
 		display: inline-block
 		margin: 0 25px
-		width: 247px  
+		width: 247px	
 		text-transform: uppercase
 		font-size: 12px 
 		vertical-align: top
@@ -1489,7 +1508,7 @@
 			display: block
 			border-bottom: 2px solid #AF8E56
 			padding: 10px 0
-			margin-bottom: 10px  
+			margin-bottom: 10px	
 			text-align: left
 			&:hover
 				color: #000 
@@ -1501,7 +1520,7 @@
 	&__moar
 		position: absolute
 		left: 0
-		bottom: 0  
+		bottom: 0	
 		display: inline-block
 		
 
