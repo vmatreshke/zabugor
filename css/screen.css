@@ -131,15 +131,21 @@ a { text-decoration: none; }
 
 .menu { position: fixed; top: 0; -moz-transform: translateX(-5000px); -ms-transform: translateX(-5000px); -webkit-transform: translateX(-5000px); transform: translateX(-5000px); width: 100%; overflow: hidden; z-index: 101; text-align: center; background: white; visibility: hidden; -moz-transition: -moz-transform 0.2s linear; -o-transition: -o-transform 0.2s linear; -webkit-transition: -webkit-transform 0.2s linear; transition: transform 0.2s linear; }
 .menu.is-visible { -moz-transform: translateX(0); -ms-transform: translateX(0); -webkit-transform: translateX(0); transform: translateX(0); visibility: visible; }
-.menu__in { position: relative; margin: 0 auto; padding: 13px 40px 10px 86px; max-width: 1366px; background: white; *zoom: 1; }
+.menu__in { position: relative; margin: 0 auto; padding: 13px 40px 10px; max-width: 1366px; background: white; *zoom: 1; }
 .menu__in:after { content: " "; display: table; clear: both; }
-.menu__in .btn-close { position: absolute; left: 40px; top: 24px; }
-.menu__list { *zoom: 1; float: left; width: 87%; }
+@media only screen and (max-width: 1250px) { .menu__in { padding: 13px 10px 10px; } }
+.menu__list { *zoom: 1; float: left; width: 85%; }
 .menu__list:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 1250px) { .menu__list { width: 82%; } }
 .menu__list a { position: relative; display: inline-block; height: 30px; line-height: 30px; font-size: 12px; text-align: left; font-family: "futurademic", Arial, sans-serif; color: #101010 !important; text-transform: uppercase; }
-.menu ul { float: left; width: 25%; text-align: left; }
+.menu ul { float: left; width: 25%; padding-right: 10px; text-align: left; }
 .menu ul:nth-child(1) a, .menu ul:nth-child(2) a { color: #bd904d !important; }
-.menu .link { float: right; margin-top: 27px; color: white; background: #bd904d; min-width: 120px; }
+.menu .menu__action { float: right; width: 170px; text-align: left; padding-top: 11px; }
+.menu .menu__action .btn { float: left; }
+.menu .menu__action .btn-close { float: right; }
+.menu .menu__action .header__lang { clear: both; padding: 15px 0 0; margin-left: -10px; }
+.menu .menu__action .header__lang a { color: #bd904d; }
+.menu .menu__action .header__lang .is-active { color: #101010; }
 
 .overlay-menu { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; visibility: hidden; background: rgba(0, 0, 0, 0.3); opacity: 0; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .overlay-menu.is-visible { visibility: visible; opacity: 1; }

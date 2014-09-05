@@ -28,7 +28,7 @@ html
 	// +scrollbar-thumb
 	// 	background: $brown  
 
-	+selection
+	+selection 
 		background: rgba($brown,.3) 
 body
 	font-family: Arial, sans-serif 
@@ -355,18 +355,18 @@ a
 	&__in
 		position: relative
 		margin: 0 auto 
-		padding: 13px 40px 10px 86px 
+		padding: 13px 40px 10px
 		max-width: 1366px
 		background: #fff 
 		+clr
-		.btn-close
-			position: absolute
-			left: 40px
-			top: 24px
-	&__list
-		+clr
+		+r(w1250)
+			padding: 13px 10px 10px
+	&__list 
+		+clr 
 		float: left
-		width: 87%
+		width: 85%
+		+r(w1250)
+			width: 82% 
 		a
 			position: relative
 			display: inline-block
@@ -380,17 +380,29 @@ a
 	ul
 		float: left
 		width: 25%	
+		padding-right: 10px
 		text-align: left
 		&:nth-child(1),
 		&:nth-child(2),
 			a
 				color: $brown !important
-	.link
+	.menu__action
 		float: right
-		margin-top: 27px
-		color: #fff
-		background: $brown
-		min-width: 120px 
+		width: 170px
+		text-align: left
+		padding-top: 11px
+		.btn
+			float: left
+		.btn-close
+			float: right
+		.header__lang
+			clear: both
+			padding: 15px 0 0 
+			margin-left: -10px 
+			a
+				color: $brown
+			.is-active
+				color: $black 
 .overlay-menu
 	position: fixed
 	top: 0
