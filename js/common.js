@@ -45,10 +45,15 @@ head.ready(function() {
 			$(".js-drop-subnav .js-drop").removeClass("is-fixed");
 		}
 	}
-	fixedDropNav();
+	if ($(".js-drop-subnav").length > 0 ){
+		fixedDropNav();
+	}
+	
 	$(window).scroll(function(){
 		fixedNav();
-		fixedDropNav();
+		if ($(".js-drop-subnav").length > 0 ){
+			fixedDropNav();
+		}
 	});
 
 	$(".js-scroll-to").on("click", function(){
