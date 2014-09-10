@@ -265,9 +265,12 @@
 			+translateY(0)
 .inview-item
 	position: relative
-	opacity: 0
-	+translateY(200px)
-	+transition(opacity 1s, transform 1s)
+	&_box,
+	&__img
+		opacity: 0
+		+translateY(200px)
+		+transition(opacity 1s, transform 1s)
+		
 	.has-dots
 		&:before
 			height: 0
@@ -288,8 +291,10 @@
 		&:before
 			height: 1px
 	&.is-visible
-		opacity: 1
-		+translateY(0)
+		&.inview-item_box,
+		.inview-item__img
+			opacity: 1
+			+translateY(0)
 		.has-dots
 			&:before
 				height: 109px

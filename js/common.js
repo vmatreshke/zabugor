@@ -37,8 +37,18 @@ head.ready(function() {
 		}
 	}
 	fixedNav();
+	function fixedDropNav() {
+		if ($(window).scrollTop() > $(".js-drop-subnav").offset().top - $(".js-nav").outerHeight()) {
+			$(".js-drop-subnav .js-drop").addClass("is-fixed");
+		}
+		else {
+			$(".js-drop-subnav .js-drop").removeClass("is-fixed");
+		}
+	}
+	fixedDropNav();
 	$(window).scroll(function(){
 		fixedNav();
+		fixedDropNav();
 	});
 
 	$(".js-scroll-to").on("click", function(){
@@ -60,6 +70,9 @@ head.ready(function() {
 		return false;
 	});
 	$(".js-scroll-to-country ul a").on("click", function(){
+		$(this).parents(".js-scroll-to-country").find("ul a").removeClass("is-active");
+		$(this).parents(".js-drop").removeClass("is-active");
+		$(this).addClass("is-active");
 		var country = $(this).attr("data-country");
 		var navHeight = +$(".js-nav").outerHeight();
 		if (country.length > 0) {
