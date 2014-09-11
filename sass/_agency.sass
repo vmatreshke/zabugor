@@ -1,0 +1,174 @@
+$yellow: #b08f52
+=mytrans
+	+transition(all 0.2s linear)
+
+.header_agency
+	font-size: 0
+	margin-bottom: 40px
+
+	.header__top
+		position: relative
+		background-color: #171717
+		padding: 9px 0 15px
+
+	.header__nav
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		+book
+		ul
+			display: inline-block
+			vertical-align: top
+			margin-right: 27px
+			&:last-child
+				margin-right: 59px
+		a
+			display: block
+			float: none
+			min-width: 122px
+			height: 26px
+			font-size: 12px
+			line-height: 26px
+			text-transform: none
+			color: $brown
+			&:before, &:after
+				background-color: $brown
+
+	.header__logo
+		+s(logo-agency)
+		display: inline-block
+		vertical-align: top
+		margin-top: 14px
+
+	.header__top-menu
+		display: block
+		margin-top: 20px
+		font-size: 0
+		white-space: nowrap
+		a
+			display: inline-block
+			vertical-align: middle
+			margin-right: 46px
+			font-size: 12px
+			color: #FFF
+			&:last-child
+				margin-right: 0
+
+	.user-menu
+		position: absolute
+		top: 12px
+		right: 20px
+		font-size: 12px
+		text-align: right
+		.user-menu__name
+			+book
+			color: $brown
+			text-transform: none
+		.user-menu__settings
+			color: #fff
+			margin-left: 10px
+		.user-menu__logout
+			color: $brown
+			margin-left: 25px
+		.user-menu__tel
+			margin-top: 6px
+			font-size: 14px
+			text-transform: uppercase
+			color: #fff
+			span
+				color: $brown
+				margin-right: 10px
+
+	.header__bottom
+		padding-top: 10px
+
+		.btn
+			vertical-align: bottom
+			width: 191px
+			height: 66px
+			text-align: center
+			padding: 15px 0 0
+			line-height: 1.5
+
+	.header__bottom-menu
+		display: inline-block
+		vertical-align: bottom
+		white-space: nowrap
+		ul
+			display: inline-block
+			vertical-align: middle
+			margin-left: 23px
+		a
+			position: relative
+			display: block
+			min-width: 169px
+			height: 34px
+			line-height: 34px
+			color: $black
+			font-size: 12px
+			&:before, &:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				height: 2px
+				background: $gray
+				+mytrans
+			&:before
+				top: 100%
+				opacity: 0
+			&:after
+				bottom: 0
+			&:hover
+				&:before
+					top: 0
+					opacity: 1
+
+.agency
+	+clr
+	margin-bottom: 57px
+
+	.agency__col1
+		float: left
+		width: 440/960*100%
+		padding-right: 25px
+		box-sizing: border-box
+
+	.agency__col2
+		margin-left: 440/960*100%
+
+	.agency__banner
+		padding: 20px
+		border: 2px solid $brown
+		+clr
+		.agency__banner-pic
+			float: left
+			width: 135/386*100%
+			img
+				display: block
+				max-width: 100%
+		.agency__banner-text
+			margin-left: 155/386*100%
+			color: $dark
+			margin-top: 15px
+		.title
+			margin-bottom: 26px
+
+	.agency__news
+		margin-top: 36px
+		padding-top: 20px
+		border-top: 2px solid $brown
+
+		.agency__news-links
+			+clr
+			.link-more
+				&:first-child
+					float: left
+				&:last-child
+					float: right
+					color: $black
+
+		.title
+			text-align: left
+			margin-bottom: 11px
+
