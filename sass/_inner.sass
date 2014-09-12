@@ -204,6 +204,9 @@
 			text-align: left
 		.tel
 			text-align: left
+		&.nowrap
+			overflow: visible
+			white-space: nowrap
 .content
 	+clr
 	&.content_spaced
@@ -1316,12 +1319,17 @@
 		color: $brown
 	&__head
 		display: block
-		margin: 0 auto 15px
+		margin: 0 auto 10px
 		color: $brown
 	.item_simple
 		margin: 0
 		img
 			margin-bottom: 0
+	&_lower
+		padding: 22px 0
+		margin-bottom: 30px
+		.title
+			line-height: 1.2
 	+ .post-nav
 		margin: -40px 0 40px
 	+ .sort_mod

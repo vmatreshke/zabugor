@@ -124,51 +124,283 @@ $yellow: #b08f52
 					top: 0
 					opacity: 1
 
-.agency
+.currency-small
+	height: 51px
+	padding: 15px 25px
+	background: $brown
+	+book
+	font-size: 14px
+	line-height: 21px
+	color: #FFF
+	text-align: right
 	+clr
-	margin-bottom: 57px
-
-	.agency__col1
+	&__title
 		float: left
-		width: 440/960*100%
-		padding-right: 25px
-		box-sizing: border-box
-
-	.agency__col2
-		margin-left: 440/960*100%
-
-	.agency__banner
-		padding: 20px
-		border: 2px solid $brown
-		+clr
-		.agency__banner-pic
-			float: left
-			width: 135/386*100%
-			img
-				display: block
-				max-width: 100%
-		.agency__banner-text
-			margin-left: 155/386*100%
+		span
 			color: $dark
+	&__item
+		display: inline-block
+		margin-left: 18px
+
+.day
+	margin-top: 20px
+	.title
+		text-align: left
+		margin-bottom: 20px
+	&__item
+		margin-top: 17px
+		+clr
+	&__item-pic
+		float: left
+		width: 90px
+		height: 62px
+		border-top: 1px solid $brown
+		img
+			display: block
+			max-width: 100%
+	&__item-content
+		display: block
+		position: relative
+		top: -4px
+		margin-left: 117px
+		color: $brown
+		+demic
+		font-size: 12px
+		line-height:  1.667
+		text-transform: uppercase
+
+.agency-banner
+	padding: 20px
+	border: 2px solid $brown
+	+clr
+	&__pic
+		float: left
+		width: 135/386*100%
+		img
+			display: block
+			max-width: 100%
+	&__text
+		margin-left: 155/386*100%
+		color: $dark
+		margin-top: 15px
+	.title
+		margin-bottom: 26px
+
+.agency-news
+	margin-top: 36px
+	padding-top: 20px
+	border-top: 2px solid $brown
+
+	&__links
+		+clr
+		.link-more
+			&:first-child
+				float: left
+			&:last-child
+				float: right
+				color: $black
+
+	.title
+		text-align: left
+		margin-bottom: 11px
+
+.news-item
+	position: relative
+	padding-left: 84px
+	margin-bottom: 15px
+	&__date
+		position: absolute
+		top: 1px
+		left: 0
+		color: $brown
+		font-size: 14px
+		+demic
+	&__content
+		font-size: 16px
+		line-height: 1.375
+		color: $black
+
+
+.big-link-block
+	height: 164px
+	margin-top: 45px
+	+vertical
+	background: $dark
+	.title
+		margin-bottom: 12px
+	.link
+		width: 100%
+	&__in
+		display: inline-block
+		vertical-align: middle
+
+.link-more-wrap
+	margin-bottom: 45px
+	text-align: center
+
+.agency-game
+	height: 300px
+	margin: 40px 0
+	position: relative
+	background: #ccc url('../img/game-promo.jpg') 50% 50% no-repeat
+	+vertical
+	&:after
+		content: ""
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0,0,0,0.36)
+	&__in
+		display: inline-block
+		vertical-align: middle
+		padding: 0 120px
+		position: relative
+		z-index: 2
+	&__text
+		margin: 20px 0 25px
+		color: #FFF
+		font-size: 16px
+		+book
+	.title
+		line-height: 1
+	.link
+		min-width: 250px
+
+.two-col
+	+clr
+	.col1, .col2
+		width: 437/960*100%
+	.col1
+		float: left
+	.col2
+		float: right
+	&_agency
+		margin-bottom: 57px
+		.col1
+			width: 415/960*100%
+		.col2
+			width: 520/960*100%
+
+	&_with-margin
+		margin: 25px 0
+
+	&_tabs
+		.col1
+			width: 200/960*100%
+		.col2
+			width: 730/960*100%
+
+.figure
+	&__pic
+		height: 228px
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+	&__caption
+		margin-top: 20px
+		color: $dark
+
+
+.search
+	width: 460px
+	margin: 45px auto 75px
+	.title
+		margin-bottom: 15px
+	.two-col
+		margin-bottom: -5px
+		.col1, .col2
+			width: 165/460*100%
+	.btn
+		display: block
+		height: 35px
+		width: 100%
+		margin-top: 15px
+
+.select
+	position: relative
+	height: 35px
+	line-height: 31px
+	margin: 5px 0
+	padding: 0 17px
+	border: 2px solid #ccc
+	font-size: 12px
+	+demic
+	text-transform: uppercase
+	&:first-child
+		margin-top: 0
+	&__label
+		position: absolute
+		top: 1px
+		left: -102px
+		color: $dark
+		vertical-align: middle
+	&__value
+		display: inline-block
+		vertical-align: middle
+		color: #999
+	&__ico
+		position: absolute
+		z-index: 3
+		top: 12px
+		right: 14px
+		+s(select-arrow)
+		&_calendar
+			top: 6px
+			right: 11px
+			+s(calendar)
+	select
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		height: 100% !important
+		width: 100% !important
+		opacity: 0 !important
+		-webkit-appearance: none
+	input[type="text"]
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		padding: 0 30px 0 17px
+		font-size: 12px
+		+demic
+		color: #999
+		text-transform: uppercase
+
+.tabs
+	&__left
+	&__right
+	&__list
+		padding: 25px 20px
+		border: 2px solid $brown
+		+demic
+		font-size: 12px
+		text-transform: uppercase
+		li
 			margin-top: 15px
-		.title
-			margin-bottom: 26px
-
-	.agency__news
-		margin-top: 36px
-		padding-top: 20px
-		border-top: 2px solid $brown
-
-		.agency__news-links
-			+clr
-			.link-more
-				&:first-child
-					float: left
-				&:last-child
-					float: right
-					color: $black
-
-		.title
-			text-align: left
-			margin-bottom: 11px
-
+			&.tabs__separator
+			&:first-child
+				margin-top: 0
+		a
+			color: $black
+			+tr(0.1s linear)
+			&:hover
+				color: $brown
+		.separator
+			margin-top: 20px
+			color: $brown
+			border: 2px solid $brown
+			border-width: 2px 0 2px
+			line-height: 2.5
+	.title
+		margin-bottom: 22px
+	.news-item
+		position: relative
+		top: -5px
