@@ -1,18 +1,18 @@
-+font(futurabookc, futurabookc)  
++font(futurabookc, futurabookc)
 =book
-	font-family: "futurabookc", Arial, sans-serif 
-+font(futurabookc-italic, futurabookc-italic)  
+	font-family: "futurabookc", Arial, sans-serif
++font(futurabookc-italic, futurabookc-italic)
 =bookit
-	font-family: "futurabookc-italic", Arial, sans-serif 
-+font(futurademic, futurademic)  
+	font-family: "futurabookc-italic", Arial, sans-serif
++font(futurademic, futurademic)
 =demic
-	font-family: "futurademic", Arial, sans-serif 
-+font(futurademic-italic, futurademic-italic)  
+	font-family: "futurademic", Arial, sans-serif
++font(futurademic-italic, futurademic-italic)
 =demicit
-	font-family: "futurademic-italic", Arial, sans-serif 
-+font(rex_bold, rex_bold)  
+	font-family: "futurademic-italic", Arial, sans-serif
++font(rex_bold, rex_bold)
 =rex
-	font-family: "rex_bold", Arial, sans-serif 
+	font-family: "rex_bold", Arial, sans-serif
 $black: #101010
 $dark: #303030
 $brown: #bd904d
@@ -26,19 +26,19 @@ html
 	// 	+border-radius(4px)
 	// 	background: none
 	// +scrollbar-thumb
-	// 	background: $brown  
+	// 	background: $brown
 
-	+selection 
-		background: rgba($brown,.3) 
+	+selection
+		background: rgba($brown,.3)
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-family: Arial, sans-serif
+	font-size: 12px
 	line-height: 1.4
 	min-width: 1024px
-	background: #fff 
-	letter-spacing: .7px 
+	background: #fff
+	letter-spacing: .7px
 	+book
-	font-size: 16px 
+	font-size: 16px
 	&.has-fixed-nav
 		.header__main
 			opacity: 0
@@ -52,23 +52,23 @@ a
 	margin-bottom: 44px
 .l-center
 	position: relative
-	margin: 0 auto  
-	padding: 0 40px 
+	margin: 0 auto
+	padding: 0 40px
 	max-width: 1366px
 	+r(w1250)
 		max-width: 1000px
 		padding: 0 20px
 	&_small
-		max-width: 1000px 
-		padding: 0 20px 
+		max-width: 1000px
+		padding: 0 20px
 	.l-center_small
 		padding: 0
 		max-width: 960px
 		+r(w1250)
 			padding: 0
-.to-center 
+.to-center
 	text-align: center
-.to-right 
+.to-right
 	text-align: right
 .to-left
 	text-align: left
@@ -76,23 +76,23 @@ a
 	+clr
 	clear: both
 .wrapper
-	overflow: hidden 
+	overflow: hidden
 .out
 	position: relative
 	//margin: 0 0 -542px
 	//min-height: 100%
 	//height: auto !important
-	//height: 100%	  
+	//height: 100%
 .push
 	clear: both
 	height: 542px
 .col-two
 	float: left
-	width: 50%	
+	width: 50%
 .col-three
 	float: left
 	padding-left: 5%
-	width: 33%	
+	width: 33%
 	+r(w1250)
 		width: 50%
 		&:last-child
@@ -106,7 +106,7 @@ a
 			position: relative
 			text-align: center
 			padding-top: 20px
-			margin: 20px 0 
+			margin: 20px 0
 			border: 0
 			&:before
 				content: ""
@@ -116,26 +116,26 @@ a
 				background: $black
 				top: 0
 				left: 50%
-				margin-left: -32px  
-// common blocks      
+				margin-left: -32px
+// common blocks
 
 .header
 	text-transform: uppercase
 	+demic
-	&__main  
+	&__main
 		position: relative
 		padding: 31px 0 18px
 		+tr(all .2s linear)
 		+transform(translateY(0))
 	a
-		color: $black 
+		color: $black
 	&__logo
 		display: block
-		margin: 0 auto 
+		margin: 0 auto
 		+s(logo)
-		+hide-text 
+		+hide-text
 	&__left
-		position: absolute 
+		position: absolute
 		left: 40px
 		top: 0
 		padding-top: 25px
@@ -168,16 +168,16 @@ a
 		font-size: 0
 		a
 			display: inline-block
-			position: relative 
+			position: relative
 			vertical-align: middle
-			padding: 0 10px 
+			padding: 0 10px
 			height: 18px
 			line-height: 18px
 			font-size: 12px
 			&:hover
 				&:after,
 				&:before
-					background: $black 
+					background: $black
 				&:before
 					top: -9px
 					opacity: 1
@@ -193,7 +193,7 @@ a
 				height: 2px
 				opacity: 0
 				background: $gray
-				+tr(all .2s linear) 
+				+tr(all .2s linear)
 			&:before
 				top: 0
 			&:after
@@ -211,19 +211,19 @@ a
 			font-size: 12px
 			letter-spacing: .5px
 			&:first-child
-				margin-left: 0 
+				margin-left: 0
 			&:hover
 				&:after,
 				&:before
-					background: $black 
+					background: $black
 				&:before
 					top: 0
 					opacity: 1
 			&.is-active
-				color: $brown 
+				color: $brown
 				&:after,
 				&:before
-					background: $brown 
+					background: $brown
 				&:before
 					top: 0
 					opacity: 1
@@ -235,14 +235,14 @@ a
 				right: 0
 				height: 2px
 				background: $gray
-				+tr(all .2s linear) 
+				+tr(all .2s linear)
 			&:before
 				opacity: 0
 				top: 100%
 			&:after
 				bottom: 0
 	.btn
-		color: #fff 
+		color: #fff
 	.tel
 		margin-right: 25px
 .menu-key
@@ -253,23 +253,23 @@ a
 		i
 			&:after
 				//bottom: -12px
-				+transform(translateY(4px)) 
+				+transform(translateY(4px))
 			&:before
 				//top: -12px
-				+transform(translateY(-4px)) 
+				+transform(translateY(-4px))
 	i
 		display: inline-block
 		position: relative
 		vertical-align: middle
 		height: 2px
 		width: 24px
-		background: $black  
+		background: $black
 		&:before,
 		&:after
 			content: ""
 			position: absolute
 			height: 2px
-			background: inherit  
+			background: inherit
 			left: 0
 			right: 0
 			+tr(all .2s linear)
@@ -281,7 +281,7 @@ a
 		display: inline-block
 		vertical-align: middle
 		color: #000
-		font-size: 12px 
+		font-size: 12px
 		+demic
 		margin-left: 7px
 		text-transform: uppercase
@@ -290,26 +290,26 @@ a
 	top: 0
 	+transform(translateY(-150px))
 	left: 0
-	right: 0 
+	right: 0
 	z-index: 99
 	background: #fff
-	border-bottom: 1px solid #efeeee 
+	border-bottom: 1px solid #efeeee
 	+tr(transform .2s)
 	.l-center
 		position: relative
-		padding: 15px 40px 7px 
+		padding: 15px 40px 7px
 		+clr
 		+r(w1250)
-			padding: 15px 20px 7px 
-	.menu-key 
+			padding: 15px 20px 7px
+	.menu-key
 		position: absolute
 		top: 20px
 		right: 24px
 		+r(w1250)
 			right: 0
 		span
-			margin: 0 7px 0 0 
-			color: $brown 
+			margin: 0 7px 0 0
+			color: $brown
 	&__logo
 		float: left
 		margin-top: 6px
@@ -318,7 +318,7 @@ a
 		position: relative
 		overflow: hidden
 		text-align: right
-		font-size: 0  
+		font-size: 0
 		padding-right: 105px
 		+r(w1250)
 			display: none
@@ -331,13 +331,13 @@ a
 			font-size: 12px
 			color: $black !important
 			text-transform: uppercase
-			+demic 
+			+demic
 			+tr(color .2s linear)
 			&:first-child
 				margin-left: 0
 			&:hover,
 			&.is-active
-				color: $brown  !important 
+				color: $brown  !important
 .menu
 	position: fixed
 	top: 0
@@ -346,7 +346,7 @@ a
 	overflow: hidden
 	z-index: 101
 	text-align: center
-	background: #fff 
+	background: #fff
 	visibility: hidden
 	+tr(transform .2s linear)
 	&.is-visible
@@ -354,19 +354,19 @@ a
 		visibility: visible
 	&__in
 		position: relative
-		margin: 0 auto 
+		margin: 0 auto
 		padding: 13px 40px 10px
 		max-width: 1366px
-		background: #fff 
+		background: #fff
 		+clr
 		+r(w1250)
 			padding: 13px 10px 10px
-	&__list 
-		+clr 
+	&__list
+		+clr
 		float: left
 		width: 85%
 		+r(w1250)
-			width: 82% 
+			width: 82%
 		a
 			position: relative
 			display: inline-block
@@ -374,12 +374,12 @@ a
 			line-height: 30px
 			font-size: 12px
 			text-align: left
-			+demic 
+			+demic
 			color: $black !important
 			text-transform: uppercase
 	ul
 		float: left
-		width: 25%	
+		width: 25%
 		padding-right: 10px
 		text-align: left
 		&:nth-child(1),
@@ -397,12 +397,12 @@ a
 			float: right
 		.header__lang
 			clear: both
-			padding: 15px 0 0 
-			margin-left: -10px 
+			padding: 15px 0 0
+			margin-left: -10px
 			a
 				color: $brown
 			.is-active
-				color: $black 
+				color: $black
 .overlay-menu
 	position: fixed
 	top: 0
@@ -411,34 +411,41 @@ a
 	left: 0
 	z-index: 100
 	visibility: hidden
-	background: rgba(#000,.3) 
+	background: rgba(#000,.3)
 	opacity: 0
-	+tr(opacity .2s linear) 
+	+tr(opacity .2s linear)
 	&.is-visible
 		visibility: visible
-		opacity: 1 
+		opacity: 1
 
 .footer
-	position: relative 
+	position: relative
 	min-height: 542px
-	background: $black 
-	color: #fff 
+	background: $black
+	color: #fff
 	font-size: 14px
 	+book
 	&__top
 		display: table
 		width: 100%
 		text-transform: none
-		border-bottom: 2px solid #a2a2a2 
+		border-bottom: 2px solid #a2a2a2
+		&_mod
+			.footer__subscribe
+				width: 350/960*100%
+				.link
+					width: 100%
+			.footer__currency
+				width: 610/960*100%
 	&__subscribe,
 	&__currency
 		display: table-cell
-		padding: 20px 0 
+		padding: 20px 0
 		vertical-align: middle
 		width: 50%
 	&__currency
 		text-align: right
-		font-size: 0 
+		font-size: 0
 		letter-spacing: .6px
 		span
 			display: inline-block
@@ -451,7 +458,7 @@ a
 				margin-left: 0
 		em
 			font-style: normal
-			color: $brown 
+			color: $brown
 	&__subscribe
 		+justify
 		+r(w1350)
@@ -465,7 +472,7 @@ a
 				max-width: 210px
 		.link
 			vertical-align: middle
-	&__main 
+	&__main
 		padding: 19px 0 27px
 		+clr
 		.link
@@ -479,15 +486,17 @@ a
 					width: 42%
 					&:first-child
 						width: 58%
-				
+		.tel + .footer__soc-link
+			margin-top: 20px
+
 	&__nav
-		
+
 		li
 			+clr
 			a
 				display: inline-block
 				position: relative
-				color: $brown 
+				color: $brown
 				text-transform: uppercase
 				+demic
 				font-size: 12px
@@ -500,15 +509,15 @@ a
 					left: 0
 					width: 0
 					height: 2px
-					background: $brown 
-					opacity: 0  
+					background: $brown
+					opacity: 0
 					+tr(all .2s linear)
 				&:hover
-					color: #fff 
+					color: #fff
 					&:after
 						width: 100%
 						opacity: 1
-						background: #fff  
+						background: #fff
 			ul
 				float: left
 				width: 50%
@@ -519,7 +528,7 @@ a
 					&:nth-child(2)
 						margin-left: 0
 				a
-					color: #fff 
+					color: #fff
 					text-transform: none
 					+book
 					line-height: 1.72
@@ -527,7 +536,7 @@ a
 					&:after
 						display: none
 					&:hover
-						color: $brown 
+						color: $brown
 	&__nav-width
 		margin-bottom: 4px
 		li
@@ -535,37 +544,37 @@ a
 				margin-bottom: 5px
 				width: 100%
 	&__soc-link
-		margin: 40px 0 0 
+		margin: 40px 0 0
 		font-size: 12px
 		color: #fff
 		+demic
 		text-transform: uppercase
 		a
-			color: $brown 
+			color: $brown
 			+tr(color .2s)
-			&:hover	
-				color: #fff 
+			&:hover
+				color: #fff
 	.tel
 		display: block
-		margin: 33px 0 0 
+		margin: 33px 0 0
 	&__bottom
 		display: table
 		width: 100%
 		text-transform: none
-		letter-spacing: 1px 
-		border-top: 2px solid #a2a2a2 
+		letter-spacing: 1px
+		border-top: 2px solid #a2a2a2
 	&__copy,
 	&__created
 		display: table-cell
 		vertical-align: top
 		width: 50%
 		a
-			color: #fff 
+			color: #fff
 			+tr(all .2s)
 			&:hover
-				color: $brown 
+				color: $brown
 	&__copy
-		padding: 24px 0 0 
+		padding: 24px 0 0
 		a
 			position: relative
 			display: inline-block
@@ -573,15 +582,15 @@ a
 			margin-right: 14px
 	&__created
 		text-align: right
-		padding: 24px 0 0 
-			
+		padding: 24px 0 0
+
 .vintage-logo
 	display: inline-block
 	margin-left: 14px
 	+s(logo-vintage)
 	+tr(all .2s linear)
 	&:hover
-		+sp(logo-vintage-h) 
+		+sp(logo-vintage-h)
 
 .preloader
 	position: fixed
@@ -590,7 +599,7 @@ a
 	right: 0
 	bottom: 0
 	left: 0
-	background: #000 
+	background: #000
 	opacity: 1
 	+tr(opacity .5s)
 	&.is-opacity
@@ -603,11 +612,11 @@ a
 		top: 50%
 		left: 50%
 	img
-		margin: -85px 0 0 -85px 
+		margin: -85px 0 0 -85px
 		+animation(sun 10s linear infinite)
 	&:after
 		content: ""
-		margin: -8px 0 0 -41px 
+		margin: -8px 0 0 -41px
 		+s(preload-logo)
 +keyframes(sun)
 	0%

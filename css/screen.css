@@ -152,6 +152,9 @@ a { text-decoration: none; }
 
 .footer { position: relative; min-height: 542px; background: #101010; color: #fff; font-size: 14px; font-family: "futurabookc", Arial, sans-serif; }
 .footer__top { display: table; width: 100%; text-transform: none; border-bottom: 2px solid #a2a2a2; }
+.footer__top_mod .footer__subscribe { width: 36.4583333333%; }
+.footer__top_mod .footer__subscribe .link { width: 100%; }
+.footer__top_mod .footer__currency { width: 63.5416666667%; }
 .footer__subscribe, .footer__currency { display: table-cell; padding: 20px 0; vertical-align: middle; width: 50%; }
 .footer__currency { text-align: right; font-size: 0; letter-spacing: 0.6px; }
 .footer__currency span { display: inline-block; vertical-align: middle; margin-left: 44px; font-size: 14px; }
@@ -171,6 +174,7 @@ a { text-decoration: none; }
   .footer__main .col-two:first-child { width: 44.5%; }
   .footer__main .col-two .col-two { width: 42%; }
   .footer__main .col-two .col-two:first-child { width: 58%; } }
+.footer__main .tel + .footer__soc-link { margin-top: 20px; }
 .footer__nav li { *zoom: 1; }
 .footer__nav li:after { content: " "; display: table; clear: both; }
 .footer__nav li a { display: inline-block; position: relative; color: #bd904d; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; font-size: 12px; line-height: 3; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
@@ -300,6 +304,7 @@ a { text-decoration: none; }
 .title.to-left { text-align: left; }
 .title.has-sun { padding-top: 87px; text-align: center; }
 .title.has-sun:before { content: ""; position: absolute; left: 50%; top: 0; margin-left: -31px; background: url('../img/icons-s5288ab6e0d.png') 0 -1622px no-repeat; width: 62px; height: 61px; }
+.title.has-sun.empty { padding-top: 70px; }
 .title.has-dots { padding-top: 195px; margin-bottom: 67px; color: #fff; text-align: center; }
 .title.has-dots:before { content: ""; position: absolute; top: 0; left: 50%; margin-left: -3px; height: 109px; width: 4px; background: url(../img/dots-w.png) 0 0 repeat; }
 .title.has-dots:after { content: ""; position: absolute; left: 50%; top: 109px; margin-left: -31px; background: url('../img/icons-s5288ab6e0d.png') 0 -1551px no-repeat; width: 62px; height: 61px; }
@@ -325,6 +330,7 @@ a { text-decoration: none; }
 .tel i { display: inline-block; vertical-align: middle; margin-right: 12px; width: 37px; height: 37px; line-height: 37px; text-align: center; border: 2px solid #666; border-radius: 50%; font-size: 12px; font-style: normal; font-family: "futurademic", Arial, sans-serif; }
 .tel span { display: inline-block; vertical-align: middle; }
 .tel strong { display: block; font-weight: normal; font-size: 20px; font-family: "futurademic", Arial, sans-serif; }
+.tel_margin-top { margin-top: 10px; }
 
 .link-more-drop { display: inline-block; position: relative; }
 .link-more-drop.is-active .subnav__main { opacity: 1; visibility: visible; right: 0; top: 100%; }
@@ -651,6 +657,7 @@ a { text-decoration: none; }
 .contact-box_big .link_action { margin-top: 13px; }
 .contact-box_big .title { text-align: left; }
 .contact-box__item { display: inline-block; vertical-align: middle; width: 45%; text-align: right; font-size: 16px; }
+.contact-box__item span { font-size: 12px; font-family: "futurademic", Arial, sans-serif; text-transform: uppercase; }
 .contact-box__item:first-child { width: 55%; text-align: left; }
 .contact-box__item .tel { text-align: left; }
 .contact-box__item.nowrap { overflow: visible; white-space: nowrap; }
@@ -732,6 +739,8 @@ a { text-decoration: none; }
 .partners a:hover { filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale"); -webkit-filter: grayscale(0%); opacity: 1; }
 
 .post-wrap { padding: 44px 0 0; font-size: 0; margin-right: -95px; }
+.post-wrap_mod { padding: 30px 0 40px; }
+.post-wrap_mod .post + .load-more { margin-top: 4px; }
 
 .post { position: relative; display: inline-block; vertical-align: top; margin: 0 60px 39px 0; border-bottom: 2px solid #bd904d; padding-bottom: 28px; width: 447px; font-size: 16px; font-family: "futurabookc", Arial, sans-serif; }
 .post + .load-more { margin-top: -18px; }
@@ -740,6 +749,8 @@ a { text-decoration: none; }
 .post_width .post__img p, .post_width .post__body p { margin-bottom: 16px; }
 .post_width .post__body { padding-top: 3px; }
 .post_width + .post-nav { margin-top: -17px; }
+.post_width-mod { padding-top: 15px; }
+.post_min-height { min-height: 230px; }
 .post__top { margin-bottom: 12px; *zoom: 1; }
 .post__top:after { content: " "; display: table; clear: both; }
 .post__img { float: left; margin-right: 32px; width: 128px; overflow: hidden; }
@@ -781,6 +792,7 @@ a { text-decoration: none; }
 .post-nav a:before { top: 100%; opacity: 0; visibility: hidden; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .post-nav.post-nav_simple { text-align: center; border-top: none; padding-top: 0; margin-bottom: 20px; margin-top: -30px; }
 .post-nav.post-nav_simple:before, .post-nav.post-nav_simple:after { display: none; }
+.post-nav_margin-bot { margin-bottom: 35px; }
 
 .record { border-top: 2px solid #bd904d; border-bottom: 2px solid #bd904d; padding: 0 14px; *zoom: 1; font-family: "rex_bold", Arial, sans-serif; font-size: 25px; line-height: 1; }
 .record:after { content: " "; display: table; clear: both; }
@@ -946,6 +958,7 @@ a { text-decoration: none; }
 .subscribe__title { display: inline-block; vertical-align: middle; width: 300px; font-size: 12px; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; }
 .subscribe .input { display: inline-block; vertical-align: middle; margin: 0 18px 0 0; width: 181px; }
 .subscribe .btn { vertical-align: middle; width: 245px; }
+.subscribe_nomargin { margin: 0; }
 
 .text-title-left { padding: 33px 0; *zoom: 1; }
 .text-title-left:after { content: " "; display: table; clear: both; }
@@ -1103,13 +1116,16 @@ a { text-decoration: none; }
 .currency-small__title span { color: #303030; }
 .currency-small__item { display: inline-block; margin-left: 18px; }
 
-.day { margin-top: 20px; }
-.day .title { text-align: left; margin-bottom: 20px; }
-.day__item { margin-top: 17px; *zoom: 1; }
-.day__item:after { content: " "; display: table; clear: both; }
-.day__item-pic { float: left; width: 90px; height: 62px; border-top: 1px solid #bd904d; }
-.day__item-pic img { display: block; max-width: 100%; }
-.day__item-content { display: block; position: relative; top: -4px; margin-left: 117px; color: #bd904d; font-family: "futurademic", Arial, sans-serif; font-size: 12px; line-height: 1.667; text-transform: uppercase; }
+.offers-wrap { margin: 40px -80px 0 0; font-size: 0; }
+.offers-wrap .offers { display: inline-block; vertical-align: top; width: 50%; padding-right: 80px; margin: 0 0 65px; }
+
+.offers { margin-top: 20px; }
+.offers .title { text-align: left; margin-bottom: 20px; }
+.offers__item { margin-top: 17px; *zoom: 1; }
+.offers__item:after { content: " "; display: table; clear: both; }
+.offers__item-pic { float: left; width: 90px; height: 63px; border-top: 1px solid #bd904d; overflow: hidden; }
+.offers__item-pic img { display: block; max-width: 100%; }
+.offers__item-content { display: block; position: relative; top: -4px; margin-left: 117px; color: #bd904d; font-family: "futurademic", Arial, sans-serif; font-size: 12px; line-height: 1.667; text-transform: uppercase; }
 
 .agency-banner { padding: 20px; border: 2px solid #bd904d; *zoom: 1; }
 .agency-banner:after { content: " "; display: table; clear: both; }
@@ -1127,7 +1143,8 @@ a { text-decoration: none; }
 
 .news-item { position: relative; padding-left: 84px; margin-bottom: 15px; }
 .news-item__date { position: absolute; top: 1px; left: 0; color: #bd904d; font-size: 14px; font-family: "futurademic", Arial, sans-serif; }
-.news-item__content { font-size: 16px; line-height: 1.375; color: #101010; }
+.news-item__content { font-size: 16px; line-height: 1.375; color: #101010; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.news-item__content:hover { color: #bd904d; }
 
 .big-link-block { height: 164px; margin-top: 45px; text-align: center; font-size: 0; background: #303030; }
 .big-link-block:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -1169,6 +1186,8 @@ a { text-decoration: none; }
 
 .select { position: relative; height: 35px; line-height: 31px; margin: 5px 0; padding: 0 17px; border: 2px solid #ccc; font-size: 12px; font-family: "futurademic", Arial, sans-serif; text-transform: uppercase; }
 .select:first-child { margin-top: 0; }
+.select_single { width: 435px; margin: 15px auto 0; }
+.select_single .select__label { left: -125px; }
 .select__label { position: absolute; top: 1px; left: -102px; color: #303030; vertical-align: middle; }
 .select__value { display: inline-block; vertical-align: middle; color: #999; }
 .select__ico { position: absolute; z-index: 3; top: 12px; right: 14px; background: url('../img/icons-s5288ab6e0d.png') 0 -1009px no-repeat; width: 12px; height: 9px; }
@@ -1179,7 +1198,7 @@ a { text-decoration: none; }
 .tabs__list { padding: 25px 20px; border: 2px solid #bd904d; font-family: "futurademic", Arial, sans-serif; font-size: 12px; text-transform: uppercase; }
 .tabs__list li { margin-top: 15px; }
 .tabs__list li:first-child { margin-top: 0; }
-.tabs__list a { color: #101010; -moz-transition: linear 0.1s; -o-transition: linear 0.1s; -webkit-transition: linear 0.1s; transition: linear 0.1s; }
+.tabs__list a { color: #101010; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .tabs__list a:hover { color: #bd904d; }
 .tabs__list .separator { margin-top: 20px; color: #bd904d; border: 2px solid #bd904d; border-width: 2px 0 2px; line-height: 2.5; }
 .tabs .title { margin-bottom: 22px; }

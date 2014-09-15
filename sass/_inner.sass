@@ -199,6 +199,10 @@
 		width: 45%
 		text-align: right
 		font-size: 16px
+		span
+			font-size: 12px
+			+demic
+			text-transform: uppercase
 		&:first-child
 			width: 55%
 			text-align: left
@@ -511,6 +515,10 @@
 	padding: 44px 0 0
 	font-size: 0
 	margin-right: -95px
+	&_mod
+		padding: 30px 0 40px
+		.post + .load-more
+			margin-top: 4px
 .post
 	position: relative
 	display: inline-block
@@ -537,6 +545,10 @@
 			padding-top: 3px
 		+ .post-nav
 			margin-top: -17px
+	&_width-mod
+		padding-top: 15px
+	&_min-height
+		min-height: 230px
 	&__top
 		margin-bottom: 12px
 		+clr
@@ -678,6 +690,8 @@
 		margin-top: -30px
 		&:before,&:after
 			display: none
+	&_margin-bot
+		margin-bottom: 35px
 
 
 .record
@@ -1294,6 +1308,8 @@
 	.btn
 		vertical-align: middle
 		width: 245px
+	&_nomargin
+		margin: 0
 .text-title-left
 	padding: 33px 0
 	+clr

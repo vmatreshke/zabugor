@@ -1,6 +1,8 @@
 $yellow: #b08f52
 =mytrans
 	+transition(all 0.2s linear)
+=trcolor
+	+transition(color 0.2s linear)
 
 .header_agency
 	font-size: 0
@@ -142,7 +144,18 @@ $yellow: #b08f52
 		display: inline-block
 		margin-left: 18px
 
-.day
+.offers-wrap
+	margin: 40px -80px 0 0
+	font-size: 0
+	.offers
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding-right: 80px
+		margin: 0 0 65px
+
+
+.offers
 	margin-top: 20px
 	.title
 		text-align: left
@@ -153,8 +166,9 @@ $yellow: #b08f52
 	&__item-pic
 		float: left
 		width: 90px
-		height: 62px
+		height: 63px
 		border-top: 1px solid $brown
+		overflow: hidden
 		img
 			display: block
 			max-width: 100%
@@ -219,6 +233,9 @@ $yellow: #b08f52
 		font-size: 16px
 		line-height: 1.375
 		color: $black
+		+trcolor
+		&:hover
+			color: $brown
 
 
 .big-link-block
@@ -332,6 +349,11 @@ $yellow: #b08f52
 	text-transform: uppercase
 	&:first-child
 		margin-top: 0
+	&_single
+		width: 435px
+		margin: 15px auto 0
+		.select__label
+			left: -125px
 	&__label
 		position: absolute
 		top: 1px
@@ -390,7 +412,7 @@ $yellow: #b08f52
 				margin-top: 0
 		a
 			color: $black
-			+tr(0.1s linear)
+			+trcolor
 			&:hover
 				color: $brown
 		.separator
