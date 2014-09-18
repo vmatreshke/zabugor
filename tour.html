@@ -9,14 +9,14 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body>
- 
+
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- BEGIN header -->
 	<header class="header">
 		<div class="l-center header__main">
 			<div class="header__left">
-				<a href="#" class="btn">Агенствам</a> 
+				<a href="#" class="btn">Агенствам</a>
 				<button class="menu-key js-menu-key">
 					<i></i>
 					<span>меню</span>
@@ -28,22 +28,22 @@
 				<div class="header__nav">
 					<a href="#" class="is-active">Лучшие предложения </a>
 					<a href="#">Индивидуальные туры</a>
-					<a href="#">Я хочу</a>              
+					<a href="#">Я хочу</a>
 				</div>
 			</div>
 			<a class="header__logo" href="#">
 				Zabugor.com - Клуб роскошных путешествий
 			</a>
 			<div class="header__right">
-				<div class="tel">	
+				<div class="tel">
 					<i>T</i>
 					<span>38044 545 4555</span>
 				</div>
-				<a href="#" class="btn">Агенствам</a> 
+				<a href="#" class="btn">Агенствам</a>
 				<div class="header__nav">
 					<a href="#">Подарки и акции</a>
 					<a href="#">Рейтинги и тренды</a>
-					<a href="#">Страны и острова</a>              
+					<a href="#">Страны и острова</a>
 				</div>
 			</div>
 		</div>
@@ -51,11 +51,11 @@
 			<div class="l-center">
 				<a href="#" class="nav__logo"></a>
 				<div class="nav__main">
-					<a href="#">Лучшие предложения</a>        
-					<a href="#">Индивидуальные туры</a>        
-					<a href="#">Я хочу</a>        
-					<a href="#">Подарки и акции</a>        
-					<a href="#">Рейтинги и тренды</a>        
+					<a href="#">Лучшие предложения</a>
+					<a href="#">Индивидуальные туры</a>
+					<a href="#">Я хочу</a>
+					<a href="#">Подарки и акции</a>
+					<a href="#">Рейтинги и тренды</a>
 					<a href="#">Страны и острова</a>
 				</div>
 				<button class="menu-key js-menu-key">
@@ -89,7 +89,7 @@
 					</ul>
 				</div>
 				<div class="menu__action">
-					<a href="#" class="btn">Агенствам</a> 
+					<a href="#" class="btn">Агенствам</a>
 					<button class="btn-close js-menu-close"></button>
 					<div class="header__lang">
 						<a href="#">eng</a>
@@ -290,13 +290,13 @@
 						</div>
 					</div>
 					<a href="#" class="link-more link-more_print"><span>Распечать тур</span></a>
-					<a href="#" class="link-more link-more_send"><span>отправить тур на e-mail</span></a>
+					<a href="send-to-email" class="link-more link-more_send js-link-to-popup"><span>отправить тур на e-mail</span></a>
 				</div>
 			</div>
-			<div class="tel">	
+			<div class="tel">
 				<i>T</i>
 				<span>
-					Наберите нашего эксперта 
+					Наберите нашего эксперта
 					<strong>38044 545 4555</strong>
 				</span>
 			</div>
@@ -327,15 +327,15 @@
 		<div class="title has-sun"></div>
 		<div class="contact-box contact-box_big">
 			<div class="contact-box__item">
-				<p>Мы всегда готовы изменить готовый тур, <br>что бы он вам идеально подошел. Узнайте больше как мы создаем</p> 
+				<p>Мы всегда готовы изменить готовый тур, <br>что бы он вам идеально подошел. Узнайте больше как мы создаем</p>
 				<a href="#" class="link link_action">Индивидуальные туры</a>
 			</div>
 			<div class="contact-box__item">
 				<div class="title">Остались вопросы?</div>
-				<div class="tel">	
+				<div class="tel">
 					<i>T</i>
 					<span>
-						Наберите нашего эксперта 
+						Наберите нашего эксперта
 						<strong>38044 545 4555</strong>
 					</span>
 				</div>
@@ -395,7 +395,7 @@
 						</ul>
 					</li>
 				</ul>
-			</div>	
+			</div>
 			<div class="col-two">
 				<div class="col-two">
 					<ul class="footer__nav">
@@ -426,14 +426,14 @@
 						<li><div><a href="#">Как оплатить</div></a></li>
 					</ul>
 					<img src="img/iata.png" alt="img">
-					<div class="tel">	
+					<div class="tel">
 						<i>T</i>
 						<span>38044 545 4555</span>
 					</div>
 				</div>
-					
-					
-			</div>	
+
+
+			</div>
 		</div>
 		<div class="footer__bottom">
 			<div class="footer__copy">
@@ -441,13 +441,32 @@
 				2014 © Zabugor.com. Все права защищены.
 			</div>
 			<div class="footer__created">
-				Разработка сайта студия 
+				Разработка сайта студия
 				<a href="#" class="vintage-logo"></a>
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 <!-- END footer -->
+
+<!-- BEGIN popup -->
+<div id="send-to-email" class="popup js-popup">
+	<button class="btn-close js-close-popup"></button>
+	<div class="title title_light">отправить на почту</div>
+
+	<label class="text-input text-input_label-left">
+		<span>Имя</span>
+		<input type="text">
+	</label>
+	<label class="text-input text-input_label-left">
+		<span>Почта</span>
+		<input type="text">
+	</label>
+
+	<button type="submit" class="btn btn_big is-liquid">отправить</button>
+</div>
+<div class="popup-overlay js-overlay"></div>
+<!-- END popup -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

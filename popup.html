@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>News</title>
+	<title>Popup</title>
 	<meta name="viewport" content="width=1024">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link rel="SHORTCUT ICON" href="img/favicon.ico">
@@ -101,89 +101,82 @@
 		<div class="overlay-menu js-overlay-menu"></div>
 	</header>
 	<!-- END header-->
-
-	<div class="l-center l-center_small">
-		<div class="title title_light has-sun">Новости и публикации</div>
-		<div class="wrapper">
-			<div class="post-wrap">
-				<div class="post">
-					<div class="post__top">
-						<div class="post__img">
-							<a href="#"><img src="img/post-img.png" alt="img"></a>
-						</div>
-						<div class="post__head">
-							<div class="post__date">24.05.14</div>
-							<div class="post__title"><a href="#">Рейтинг лучших ресторанов Монако</a></div>
-						</div>
-					</div>
-					<div class="post__body">
-						<p>Мы уже взрослые, опытные, «битые», начитанные и обученные, повидавшие и поездившие. Но нам настолько интересно жить, развиваться, ставить цели, учиться – у клиентов, партнеров, ситуаций, книг. </p>
-						<p><a href="#" class="post__more">Подробнее</a></p>
-					</div>
-				</div>
-				<div class="post">
-					<div class="post__top">
-						<div class="post__img">
-							<a href="#"><img src="img/post-img.png" alt="img"></a>
-						</div>
-						<div class="post__head">
-							<div class="post__date">24.05.14</div>
-							<div class="post__title"><a href="#">Рейтинг лучших ресторанов Монако</a></div>
-						</div>
-					</div>
-					<div class="post__body">
-						<p>Мы уже взрослые, опытные, «битые», начитанные и обученные, повидавшие и поездившие. Но нам настолько интересно жить, развиваться, ставить цели, учиться – у клиентов, партнеров, ситуаций, книг. </p>
-						<p><a href="#" class="post__more">Подробнее</a></p>
-					</div>
-				</div>
-				<div class="post">
-					<div class="post__top">
-						<div class="post__img">
-							<a href="#"></a>
-						</div>
-						<div class="post__head">
-							<div class="post__date">24.05.14</div>
-							<div class="post__title"><a href="#">Рейтинг лучших ресторанов Монако</a></div>
-						</div>
-					</div>
-					<div class="post__body">
-						<p>Мы уже взрослые, опытные, «битые», начитанные и обученные, повидавшие и поездившие. Но нам настолько интересно жить, развиваться, ставить цели, учиться – у клиентов, партнеров, ситуаций, книг. </p>
-						<p><a href="#" class="post__more">Подробнее</a></p>
-					</div>
-				</div>
-				<div class="post">
-					<div class="post__top">
-						<div class="post__img">
-							<a href="#"><img src="img/post-img.png" alt="img"></a>
-						</div>
-						<div class="post__head">
-							<div class="post__date">24.05.14</div>
-							<div class="post__title"><a href="#">Рейтинг лучших ресторанов Монако</a></div>
-						</div>
-					</div>
-					<div class="post__body">
-						<p>Мы уже взрослые, опытные, «битые», начитанные и обученные, повидавшие и поездившие. Но нам настолько интересно жить, развиваться, ставить цели, учиться – у клиентов, партнеров, ситуаций, книг. </p>
-						<p><a href="#" class="post__more">Подробнее</a></p>
-					</div>
-				</div>
-				<div class="load-more"><img src="img/loading.png" alt=""></div>
-			</div>
-		</div>
-		<!-- BEGIN pagi -->
-		<div class="pagi">
-			<a href="#" class="pagi__prev"></a>
-			<div class="pagi__items">
-				<a href="#">1</a>
-				<a href="#">2</a>
-				<a href="#" class="is-active">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-			</div>
-			<a href="#" class="pagi__next"></a>
-		</div>
-		<!-- END pagi -->
-	</div>
 </div>
+
+<div class="l-center">
+	<div class="title to-left">Попапы</div>
+	<a href="popup1" class="js-link-to-popup">Отправить заявку</a><br>
+	<a href="popup2" class="js-link-to-popup">Отправить на почту</a><br>
+	<a href="popup3" class="js-link-to-popup">Спасибо!</a><br>
+</div>
+
+<!-- BEGIN popup -->
+<div id="popup1" class="popup js-popup">
+	<button class="btn-close js-close-popup"></button>
+	<div class="title title_light">Отправить зявку</div>
+
+	<label class="text-input text-input_label-left">
+		<span>ФИО</span>
+		<input type="text">
+	</label>
+	<label class="text-input text-input_label-left">
+		<span>Телефон</span>
+		<input type="text">
+	</label>
+	<label class="text-input text-input_label-left">
+		<span>Почта</span>
+		<input type="text">
+	</label>
+	<label class="text-input text-input_label-left">
+		<span>Комментарий</span>
+		<textarea rows="3"></textarea>
+	</label>
+
+	<button type="submit" class="btn btn_big is-liquid">отправить</button>
+</div>
+<!-- END popup -->
+
+<!-- BEGIN popup -->
+<div id="popup2" class="popup js-popup">
+	<button class="btn-close js-close-popup"></button>
+	<div class="title title_light">отправить на почту</div>
+
+	<label class="text-input text-input_label-left">
+		<span>Имя</span>
+		<input type="text">
+	</label>
+	<label class="text-input text-input_label-left">
+		<span>Почта</span>
+		<input type="text">
+	</label>
+
+	<button type="submit" class="btn btn_big is-liquid">отправить</button>
+</div>
+<!-- END popup -->
+
+<!-- BEGIN popup -->
+<div id="popup3" class="popup js-popup">
+	<button class="btn-close js-close-popup"></button>
+	<div class="title title_light">Спасибо!</div>
+	<p>Прибытие в Краков - неповторимый город с тысячелетней историей, внесенный в список ЮНЕСКО. Базовая экскурсия по Кракову*.</p>
+</div>
+<div class="popup-overlay js-overlay"></div>
+<!-- END popup -->
+
+<!-- BEGIN pagi -->
+<div class="pagi">
+	<a href="#" class="pagi__prev"></a>
+	<div class="pagi__items">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#" class="is-active">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+	</div>
+	<a href="#" class="pagi__next"></a>
+</div>
+<!-- END pagi -->
+
 <!-- END out-->
 <!-- BEGIN footer -->
 <div class="footer">

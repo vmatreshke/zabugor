@@ -2,6 +2,7 @@ head.ready(function() {
 
 	$(document).on("click", function(){
 		$(".js-popup").hide();
+		$('.js-overlay').fadeOut(200);
 		$(".js-share").removeClass("is-active");
 		$(".js-drop").removeClass("is-active");
 	});
@@ -48,7 +49,7 @@ head.ready(function() {
 	if ($(".js-drop-subnav").length > 0 ){
 		fixedDropNav();
 	}
-	
+
 	$(window).scroll(function(){
 		fixedNav();
 		if ($(".js-drop-subnav").length > 0 ){
@@ -71,7 +72,7 @@ head.ready(function() {
 	            scrollTop: $("."+section).offset().top + margin - navHeight
 	        }, 500);
 		}
-		
+
 		return false;
 	});
 	$(".js-scroll-to-country ul a").on("click", function(){
@@ -124,7 +125,7 @@ head.ready(function() {
 
 	$('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
 	  if (isInView) {
-	    
+
 	    if (visiblePartY == 'top') {
 	      $(this).addClass("is-visible");
 	    } else if (visiblePartY == 'bottom') {
@@ -138,7 +139,24 @@ head.ready(function() {
 	  }
 	});
 
-	
-		
 
-}); 
+	$('.js-link-to-popup').on('click', function(event) {
+		var targetPopup = $('#' + $(this).attr('href'));
+		$('.js-overlay').fadeIn(200);
+		targetPopup.fadeIn(500);
+		event.stopPropagation();
+		return false
+	});
+
+	$('.js-close-popup').on('click', function(event) {
+		$(this).parents('.js-popup').fadeOut(200);
+		$('.js-overlay').fadeOut(500);
+		event.stopPropagation();
+		return false
+	});
+
+	$('.js-popup').on('click', function(event) {
+		event.stopPropagation();
+	})
+
+});
