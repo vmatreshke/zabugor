@@ -1,8 +1,8 @@
 head.ready(function() {
 
 	$(document).on("click", function(){
-		$(".js-popup").hide();
-		$('.js-overlay').fadeOut(200);
+		$(".js-popup").fadeOut(200);
+		$('.js-overlay').fadeOut(500);
 		$(".js-share").removeClass("is-active");
 		$(".js-drop").removeClass("is-active");
 	});
