@@ -1261,11 +1261,9 @@ a { text-decoration: none; }
 .popup .btn-close { position: absolute; top: 15px; right: 12px; }
 .popup p { text-align: center; }
 
-@media print { .header, .footer, .popup, .popup-overlay, .page-head__top, .important-text, .post-nav, .dots-line, .contact-box, .more-info__links, .slick-next, .slick-prev { display: none !important; }
+@media print { .header, .footer, .popup, .popup-overlay, .page-head__top, .page-head__img, .important-text, .post-nav, .dots-line, .contact-box, .more-info__links, .slick-next, .slick-prev, .has-sun { display: none !important; }
   .page-head { position: static !important; height: auto !important; }
   .page-head__box { position: static !important; margin: 0 auto !important; width: 90% !important; }
-  .tour-table { height: auto !important; }
-  .tour-table img { margin-bottom: 0 !important; padding-bottom: 0 !important; }
   .js-slider { display: block !important; overflow: visible !important; height: auto !important; width: 100% !important; }
   .slick-list { overflow: visible !important; }
   .slick-track { display: block !important; width: 100% !important; height: auto !important; opacity: 1 !important; overflow: visible !important; -webkit-transform: translate3d(0px, 0px, 0px) !important; transform: translate3d(0px, 0px, 0px) !important; }
