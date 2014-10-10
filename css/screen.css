@@ -440,8 +440,8 @@ a { text-decoration: none; }
 .index-page .header__main .btn:hover { color: white; }
 .index-page .nav .menu-key span { color: black; }
 
-.holder { position: absolute; top: 0; right: 0; left: 0; height: 680px; text-align: center; z-index: -1; overflow: hidden; }
-.holder video { width: 100%; height: auto; }
+.holder { position: absolute; top: 0; right: 0; left: 0; height: 680px; text-align: center; z-index: -1; overflow: hidden; background: black; }
+.holder video { width: 100%; height: auto; opacity: 0.5; }
 
 .main-promo { position: relative; padding: 65px 0 111px; min-height: 524px; color: white; font-size: 16px; font-family: "futurabookc", Arial, sans-serif; text-align: center; }
 .main-promo hr { margin: 22px auto; width: 63px; height: 2px; background: white; border: 0; background: rgba(255, 255, 255, 0.6); }
@@ -870,9 +870,10 @@ a { text-decoration: none; }
 .propos:hover:before { color: #101010; }
 .propos:first-child { margin-left: 0; }
 .propos__counter { position: absolute; top: 33px; left: 39px; font-size: 100px; font-family: "rex_bold", Arial, sans-serif; z-index: 2; color: #bd904d; line-height: 1; font-style: normal; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
-@media only screen and (max-width: 1250px) { .propos__counter { left: 13px; } }
+@media only screen and (max-width: 1250px) { .propos__counter { left: 13px; top: 20px; } }
 .propos__title { display: inline-block; position: relative; z-index: 2; overflow: hidden; min-height: 32px; font-size: 12px; color: #bd904d; text-transform: uppercase; font-family: "futurademic", Arial, sans-serif; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
 .propos__text { overflow: hidden; position: relative; z-index: 2; }
+@media only screen and (max-width: 1250px) { .propos__text { display: none; } }
 .propos .card3d__side { padding: 27px 25px 45px 110px; }
 @media only screen and (max-width: 1250px) { .propos .card3d__side { padding: 27px 25px 25px 75px; } }
 
