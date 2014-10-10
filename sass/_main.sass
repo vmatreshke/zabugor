@@ -1,9 +1,9 @@
 .index-page
 	//background-position:  50% 0
-	//background-repeat: no-repeat  
+	//background-repeat: no-repeat
 	.header
 		a
-			color: #fff 
+			color: #fff
 		.tel
 			color: #fff
 			i
@@ -31,7 +31,7 @@
 		+s(logo-index)
 	.menu-key
 		span
-			color: #fff 
+			color: #fff
 	.header__main
 		.btn
 			background: #fff
@@ -42,7 +42,7 @@
 	.nav
 		.menu-key
 			span
-				color: #000 
+				color: #000
 .holder
 	position: absolute
 	top: 0
@@ -52,21 +52,21 @@
 	text-align: center
 	z-index: -1
 	overflow: hidden
-	background: #000 
+	background: #000
 	video
 		width: 100%
 		height: auto
-		opacity: .5 
+		opacity: .5
 .main-promo
 	position: relative
 	padding: 65px 0 111px
 	min-height: 524px
 	color: #fff
 	font-size: 16px
-	+book 
+	+book
 	text-align: center
 	hr
-		margin: 22px auto  
+		margin: 22px auto
 		width: 63px
 		height: 2px
 		background: #fff
@@ -80,7 +80,7 @@
 			top: 50%
 			left: 50%
 			margin: -70px 0 0 -70px
-			+s(sun-empty) 
+			+s(sun-empty)
 	&__bottom
 		position: absolute
 		left: 0
@@ -116,15 +116,15 @@
 				+animation(anim-bg 2s linear infinite)
 				+s(angle)
 				&:before
-					content: "" 
+					content: ""
 					position: absolute
-					top: 10px 
+					top: 10px
 					left: 0
 					+s(angle)
-					
+
 +keyframes(anim-bg)
 	0%
-		+translateY(0)	
+		+translateY(0)
 	50%
 		+translateY(30px)
 	100%
@@ -140,9 +140,9 @@
 .icon-sun
 	display: block
 	margin: 0 auto
-	+s(sun) 
+	+s(sun)
 .goal
-	padding: 110px 0 0 
+	padding: 110px 0 0
 	width: 760px
 	margin: 0 auto 9px
 	.icon-sun
@@ -162,7 +162,7 @@
 			color: $brown
 			+tr(color .2s linear)
 			&:hover
-				color: $black 
+				color: $black
 			&:after
 				content: ""
 				position: absolute
@@ -170,14 +170,14 @@
 				bottom: 0
 				width: 100%
 				height: 2px
-				background: $brown 
+				background: $brown
 	.layout
 		margin-bottom: 45px
 	.layout__left
 		padding-left: 6px
 .text-item
 	position: relative
-	padding: 0 0 39px 0 
+	padding: 0 0 39px 0
 	p
 		margin-bottom: 11px
 		+clr
@@ -189,12 +189,12 @@
 				margin-right: 12px
 				font-size: 100px
 				line-height: 1
-				+rex 
-				color: $brown 
+				+rex
+				color: $brown
 				+r(w1250)
 					margin-right: 7px
 	&_small
-		margin: 0 auto 
+		margin: 0 auto
 		width: 820px
 .more
 	text-align: center
@@ -202,18 +202,18 @@
 	font-size: 12px
 	text-transform: uppercase
 	+demic
-	&__btn	
+	&__btn
 		height: 50px
 		button
 			position: relative
 			display: inline-block
 			height: 37px
 			width: 37px
-			border-radius: 50% 
-			background: $brown 
+			border-radius: 50%
+			background: $brown
 			+tr(all .2s linear)
 			&:hover
-				box-shadow: 0 0 0 6px $brown 
+				box-shadow: 0 0 0 6px $brown
 		i
 			position: absolute
 			left: 50%
@@ -222,26 +222,32 @@
 			+s(angle-white)
 			+tr(all .2s linear)
 	&_white
-		color: #fff 
-		.more__btn	
+		color: #fff
+		.more__btn
 			button
-				background: #fff  
+				background: #fff
 				&:hover
 					box-shadow: 0 0 0 6px #fff
 			i
 				+s(angle)
+	&_to-top
+		margin-top: 40px
+		.more__btn
+			i
+				+s(angle-white-to-top)
+				top: 12px
 	a
 		color: #fff
 		&:hover
 			text-decoration: underline
 .dots
 	position: relative
-	margin: 0 auto 
+	margin: 0 auto
 	height: 535px
 	width: 3px
 	opacity: 0
 	&:before
-		content: "" 
+		content: ""
 		position: absolute
 		top: 0
 		height: 0
@@ -251,10 +257,10 @@
 	&:after
 		content: ""
 		position: absolute
-		margin: -30px 0 0 -31px 
+		margin: -30px 0 0 -31px
 		top: 50%
 		left: 50%
-		+s(sun-full) 
+		+s(sun-full)
 		opacity: 0
 		+translateY(-200px)
 		+transition(opacity 1s, transform 1s)
@@ -272,7 +278,7 @@
 		opacity: 0
 		+translateY(200px)
 		+transition(opacity 1s, transform 1s)
-		
+
 	.has-dots
 		&:before
 			height: 0
@@ -312,18 +318,18 @@
 		+ .dots-line_small
 			&:before
 				height: 126px
-		
-		
+
+
 .about
 	position: relative
-	margin: 0 -40px 
+	margin: 0 -40px
 	padding-bottom: 91px
 	min-height: 697px
-	background: url(../img/about.png) 50% 0 no-repeat 
+	background: url(../img/about.png) 50% 0 no-repeat
 	+r(w1250)
-		margin: 0 -20px 
+		margin: 0 -20px
 	&__descr
-		background: #fff 
+		background: #fff
 		padding: 22px 25px 0 40px
 		+r(w1250)
 			padding-left: 25px
@@ -342,7 +348,7 @@
 			width: auto
 	&__info
 		padding: 16px 25px 0 40px
-		color: #fff 
+		color: #fff
 		text-align: left
 		+r(w1250)
 			padding-left: 18px
@@ -362,13 +368,13 @@
 		.layout__left,
 		.layout__right
 			vertical-align: middle
-		
-				
+
+
 	&__link
 		+r(w1250)
 			margin-left: 150px
 		.link
-			margin: 0 10px 
+			margin: 0 10px
 			+r(w1250)
 				display: block
 				margin: 5px 0
@@ -384,7 +390,7 @@
 	padding: 7px
 	width: 145px
 	height: 145px
-	border-radius: 50% 
+	border-radius: 50%
 	color: #fff
 	font-size: 48px
 	text-align: center
@@ -398,15 +404,15 @@
 		width: 100%
 		height: 100%
 		border: 1px solid
-		line-height: 125px  
-		border-radius: 50% 
+		line-height: 125px
+		border-radius: 50%
 		+r(w1250)
 			line-height: 110px
 
 .benefit
 	padding: 20px 0 10px
 	&__head
-		margin: 9px 0 67px 
+		margin: 9px 0 67px
 		text-align: center
 .post-list-wrap
 	margin-bottom: -18px
@@ -417,7 +423,7 @@
 	display: inline-block
 	position: relative
 	vertical-align: top
-	margin: 0 0 62px 
+	margin: 0 0 62px
 	padding-right: 4%
 	width: 33%
 	font-size: 16px
@@ -434,7 +440,7 @@
 		+r(w1250)
 			display: block
 			margin: 0 auto 62px !important
-			text-align: center 
+			text-align: center
 			width: 760px !important
 			.post-list__descr
 				&:before
@@ -450,20 +456,20 @@
 			left: 0
 			width: 62px
 			height: 2px
-			background: $brown  
+			background: $brown
 	&__title
 		margin-bottom: 21px
 		font-size: 14px
 		+demic
 		line-height: 1.6
 		text-transform: uppercase
-		color: $brown 
+		color: $brown
 		a
-			color: $brown 
+			color: $brown
 .contacts-wrap
 	position: relative
 	margin: -3px -40px 35px
-	min-height: 506px  
+	min-height: 506px
 	background: url(../img/cont-bg.png) 50% 0 no-repeat
 	+clr
 	+r(w1250)
@@ -483,20 +489,20 @@
 	display: table
 	+clr
 	width: 643px
-	background: #fff 
+	background: #fff
 	&__col
 		position: relative
 		padding: 21px 8% 40px
 		width: 50%
 		display: table-cell
 		vertical-align: top
-		font-size: 16px 
+		font-size: 16px
 		&:before
 			content: ""
 			position: absolute
 			left: 0
 			top: 23px
-			bottom: 0 
+			bottom: 0
 			width: 3px
 			background: url(../img/dots.png) 0 0 repeat
 		&:first-child
@@ -516,7 +522,7 @@
 				position: absolute
 				left: 0
 				top: 1px
-				color: $brown 
+				color: $brown
 	&__title
 		position: relative
 		margin-bottom: 17px
@@ -539,7 +545,7 @@
 		margin-bottom: 7px
 	p
 		margin-bottom: 26px
-		
+
 
 .spec-offer
 	position: relative
@@ -549,32 +555,32 @@
 		position: absolute
 		bottom: -102px
 		margin-left: -1px
-		left: 50% 
+		left: 50%
 		width: 3px
 		height: 230px
-		background: url(../img/dots.png) 0 0 repeat 
+		background: url(../img/dots.png) 0 0 repeat
 	&__top
-		margin: 0 0 30px 
+		margin: 0 0 30px
 		text-align: center
 	&__main
 		margin: 0 auto
-		+clr 
+		+clr
 		max-width: 980px
 	.title
 		margin-bottom: 16px
 
 .offer-list
-	position: relative 
+	position: relative
 	float: left
 	margin: 0 0 15px 50px
-	width: 465px 
+	width: 465px
 	+clr
 	+demic
 	font-size: 12px
 	text-transform: uppercase
 	&:first-child,
 	&:nth-child(2n+1)
-		margin-left: 0 
+		margin-left: 0
 	+r(w1250)
 		margin-left: 30px
 	&__title
@@ -603,7 +609,7 @@
 				left: 0
 				right: 0
 				height: 2px
-				background: $brown  
+				background: $brown
 			&:after
 				bottom: 0
 			&:before
