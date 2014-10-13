@@ -88,10 +88,14 @@
 		bottom: 50px
 		height: 110px
 		text-align: center
-		.soc-counter
+		// .soc-counter
+		// 	position: absolute
+		// 	right: 40px
+		// 	bottom: 25px
+		.like
 			position: absolute
 			right: 40px
-			bottom: 25px
+			bottom: 5px
 	&__descr
 		.link
 			margin-bottom: 10px
@@ -136,6 +140,40 @@
 		vertical-align: bottom
 	img
 		display: block
+.like
+	cursor: pointer
+	&__ico
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		margin-right: 10px
+		width: 37px
+		height: 37px
+		border: 2px solid rgba(255,255,255,0.7)
+		border-radius: 50%
+		+transition(0.2s linear)
+		line-height: 37px
+		text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: -3px
+			+s(heart)
+	&__text
+		display: inline-block
+		vertical-align: middle
+		+demic
+		font-size: 12px
+		color: #FFF
+		text-transform: uppercase
+	&:hover
+		.like__ico
+			box-shadow: 0 0 0 3px #fff
+
+
+
 
 .icon-sun
 	display: block
