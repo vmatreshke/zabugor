@@ -28,7 +28,8 @@
 				background: #fff
 				background: rgba(#fff,.6)
 	.header__logo
-		+s(logo-index)
+		+s(logo-index-cleen)
+		margin-top: 2px
 	.menu-key
 		span
 			color: #fff
@@ -48,7 +49,8 @@
 	top: 0
 	right: 0
 	left: 0
-	height: 680px
+	// height: 680px
+	height: 650px
 	text-align: center
 	z-index: -1
 	overflow: hidden
@@ -57,6 +59,9 @@
 		width: 100%
 		height: auto
 		opacity: .5
+		+r(w1250)
+			width: auto
+			min-height: 650px
 .main-promo
 	position: relative
 	padding: 65px 0 111px
@@ -171,6 +176,7 @@
 	&:hover
 		.like__ico
 			box-shadow: 0 0 0 3px #fff
+			border-color: #FFF
 
 
 
@@ -180,7 +186,8 @@
 	margin: 0 auto
 	+s(sun)
 .goal
-	padding: 110px 0 0
+	// padding: 110px 0 0
+	padding: 90px 0 0
 	width: 760px
 	margin: 0 auto 9px
 	.icon-sun
