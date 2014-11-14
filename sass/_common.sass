@@ -93,14 +93,19 @@ a
 	float: left
 	padding-left: 5%
 	width: 33%
+	&:first-child,
+	&:nth-child(3n+1)
+		padding-left: 0
 	+r(w1250)
 		width: 50%
+		&:nth-child(3n+1)
+			padding-left: 5%
+		// &:nth-child(2n)
+		// 	padding-left: 0
 		&:last-child
 			float: none
 			width: 100%
 			clear: both
-	&:first-child
-		padding-left: 0
 	.info
 		+r(w1250)
 			position: relative
