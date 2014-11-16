@@ -391,6 +391,9 @@ $yellow: #b08f52
 		margin: 15px auto 0
 		.select__label
 			left: -125px
+	&_no-border
+		padding: 0
+		border: 0
 	&__label
 		position: absolute
 		top: 1px
@@ -551,3 +554,18 @@ $yellow: #b08f52
 			position: absolute
 			top: 7px
 			left: 0
+
+.raty
+	font-size: 0
+	display: inline-block
+	vertical-align: middle
+	img
+		vertical-align: middle
+		margin-right: 9px
+		&:last-child
+			margin: 0 
+	+ .checkbox
+		margin-left: 20px
+		vertical-align: middle
+		height: 16px
+		line-height: 16px

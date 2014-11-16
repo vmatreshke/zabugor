@@ -1225,6 +1225,7 @@ a { text-decoration: none; }
 .select:first-child { margin-top: 0; }
 .select_single { width: 435px; margin: 15px auto 0; }
 .select_single .select__label { left: -125px; }
+.select_no-border { padding: 0; border: 0; }
 .select__label { position: absolute; top: 1px; left: -102px; color: #303030; vertical-align: middle; }
 .select__value { display: inline-block; vertical-align: middle; color: #999999; }
 .select__ico { position: absolute; z-index: 3; top: 12px; right: 14px; background: url('../img/icons-sddf34d1dce.png') 0 -1191px no-repeat; width: 12px; height: 9px; }
@@ -1269,6 +1270,11 @@ a { text-decoration: none; }
 .text-input_label-left { padding-left: 120px; position: relative; margin-top: 5px; }
 .text-input_label-left input[type="text"], .text-input_label-left textarea { padding: 5px 5px; margin: 0; }
 .text-input_label-left span { position: absolute; top: 7px; left: 0; }
+
+.raty { font-size: 0; display: inline-block; vertical-align: middle; }
+.raty img { vertical-align: middle; margin-right: 9px; }
+.raty img:last-child { margin: 0; }
+.raty + .checkbox { margin-left: 20px; vertical-align: middle; height: 16px; line-height: 16px; }
 
 .popup-overlay { display: none; background: rgba(0, 0, 0, 0.3); position: fixed; z-index: 1000; top: 0; left: 0; right: 0; bottom: 0; }
 
