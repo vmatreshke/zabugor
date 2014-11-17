@@ -79,89 +79,383 @@
 	<!-- END header-->
 	<div class="l-center l-center_small">
 		<!-- BEGIN search -->
-		<div class="search">
+		<div class="search search_tour">
 			<div class="title title_light">Поиск тура online</div>
 			<form class="search__form">
-				<div class="two-col">
-					<div class="col1">
-						<div class="select js-select">
-							<span class="select__label">Начало тура</span>
-							<span class="select__value">20.01.14</span>
-							<i class="select__ico select__ico_calendar"></i>
+				<div class="search__left">
+					<div class="two-col">
+						<div class="col1">
+							<div class="select js-select">
+								<span class="select__label">Начало тура</span>
+								<span class="select__value">20.01.14</span>
+								<i class="select__ico select__ico_calendar"></i>
+							</div>
+						</div>
+						<div class="col2">
+							<div class="select js-select">
+								<span class="select__label">конец тура</span>
+								<span class="select__value">20.01.14</span>
+								<i class="select__ico select__ico_calendar"></i>
+							</div>
 						</div>
 					</div>
-					<div class="col2">
-						<div class="select js-select">
-							<span class="select__label">конец тура</span>
-							<span class="select__value">20.01.14</span>
-							<i class="select__ico select__ico_calendar"></i>
+					<div class="select js-select">
+						<span class="select__label">Вылет из</span>
+						<span class="select__value">Киев</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="Киев">Киgев</option>
+							<option value="Харьков">Харьков</option>
+							<option value="Днепропетровск">Днепропетровск</option>
+						</select>
+					</div>
+					<div class="select js-select">
+						<span class="select__label">Страна</span>
+						<span class="select__value">Маврикий</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="Маврикий">Маврикий</option>
+							<option value="Маврикий2">Маврикий 2</option>
+							<option value="Маврикий3">Маврикий 3</option>
+						</select>
+					</div>
+					<div class="select js-select">
+						<span class="select__label">город</span>
+						<span class="select__value">Киев</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="Киев">Киgев</option>
+							<option value="Харьков">Харьков</option>
+							<option value="Днепропетровск">Днепропетровск</option>
+						</select>
+					</div>
+					<div class="select select_no-border">
+						<span class="select__label">категория</span>
+						<div class="raty js-raty" data-score="3">
+							<input class="js-mark" type="text" value="3" readonly hidden>
 						</div>
+						<label class="checkbox">
+							<input type="checkbox">
+							<span>все</span>
+						</label>
+					</div>
+					<div class="select js-select">
+						<span class="select__label">ТУР</span>
+						<span class="select__value">Киев</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
+							<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
+							<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
+						</select>
+					</div>
+					<div class="select js-select">
+						<span class="select__label">Гостиница</span>
+						<span class="select__value">1</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
 					</div>
 				</div>
-				<div class="select js-select">
-					<span class="select__label">Вылет из</span>
-					<span class="select__value">Киев</span>
-					<i class="select__ico"></i>
-					<select>
-						<option value="Киев">Киgев</option>
-						<option value="Харьков">Харьков</option>
-						<option value="Днепропетровск">Днепропетровск</option>
-					</select>
-				</div>
-				<div class="select js-select">
-					<span class="select__label">Страна</span>
-					<span class="select__value">Маврикий</span>
-					<i class="select__ico"></i>
-					<select>
-						<option value="Маврикий">Маврикий</option>
-						<option value="Маврикий2">Маврикий 2</option>
-						<option value="Маврикий3">Маврикий 3</option>
-					</select>
-				</div>
-				<div class="select js-select">
-					<span class="select__label">город</span>
-					<span class="select__value">Киев</span>
-					<i class="select__ico"></i>
-					<select>
-						<option value="Киев">Киgев</option>
-						<option value="Харьков">Харьков</option>
-						<option value="Днепропетровск">Днепропетровск</option>
-					</select>
-				</div>
-				<div class="select select_no-border">
-					<span class="select__label">категория</span>
-					<div class="raty js-raty" data-score="3">
-						<input class="js-mark" type="text" value="3" readonly hidden>
+				<div class="search__right">
+					<div class="select select_small js-select">
+						<span class="select__label">Ночей от</span>
+						<span class="select__value">3</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">3</option>
+							<option value="2">7</option>
+							<option value="3">10</option>
+						</select>
+					</div>
+					<div class="select select_small js-select">
+						<span class="select__label">до</span>
+						<span class="select__value">5</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">5</option>
+							<option value="2">10</option>
+							<option value="3">14</option>
+						</select>
+					</div>
+					<div class="select select_small js-select">
+						<span class="select__label">Взрослых</span>
+						<span class="select__value">1</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+					<div class="select select_small js-select">
+						<span class="select__label">Детей</span>
+						<span class="select__value">1</span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
 					</div>
 					<label class="checkbox">
 						<input type="checkbox">
-						<span>все</span>
+						<span>Полный пакет</span>
 					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>Только проживание</span>
+					</label>
+					<div class="select select_medium js-select">
+						<span class="select__label">Питание</span>
+						<span class="select__value"></span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">3</option>
+							<option value="2">7</option>
+							<option value="3">10</option>
+						</select>
+					</div>
+					<div class="select select_medium js-select">
+						<span class="select__label">Цена от</span>
+						<span class="select__value"></span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">3</option>
+							<option value="2">7</option>
+							<option value="3">10</option>
+						</select>
+					</div>
+					<div class="select select_medium js-select">
+						<span class="select__label">до</span>
+						<span class="select__value"></span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="1">3</option>
+							<option value="2">7</option>
+							<option value="3">10</option>
+						</select>
+					</div>
+					<div class="select select_small js-select">
+						<span class="select__label">Валюта</span>
+						<span class="select__value"></span>
+						<i class="select__ico"></i>
+						<select>
+							<option value="USD">USD</option>
+							<option value="EUR">EUR</option>
+							<option value="UAH">UAH</option>
+						</select>
+					</div>
 				</div>
-				<div class="select js-select">
-					<span class="select__label">ТУР</span>
-					<span class="select__value">Киев</span>
-					<i class="select__ico"></i>
-					<select>
-						<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
-						<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
-						<option value="Отдых на острове Маврикий">Отдых на острове Маврикий</option>
-					</select>
-				</div>
-				<div class="select js-select">
-					<span class="select__label">Гостиница</span>
-					<span class="select__value">1</span>
-					<i class="select__ico"></i>
-					<select>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-					</select>
-				</div>
-				<button type="submit" class="btn">Искать</button>
 			</form>
 		</div>
 		<!-- END search -->
+	</div>
+	<div class="search-btn-wrap">
+		<div class="l-center l-center_small">
+			<button type="submit" class="btn btn_big">Искать</button>
+		</div>
+	</div>
+
+	<div class="l-center l-center_small">
+		<!-- BEGIN search-results -->
+		<div class="search-results">
+			<div class="search-results__header">
+				<div class="two-col">
+					<div class="col1">
+						<table class="search-results__info">
+							<tr>
+								<td><img src="img/icons/icon-1.png"></td>
+								<td>есть места / нет мест / по запросу</td>
+							</tr>
+							<tr>
+								<td><img src="img/icons/icon-2.png"></td>
+								<td>мгновенное подтверждение</td>
+							</tr>
+							<tr>
+								<td><img src="img/icons/icon-3.png"></td>
+								<td>остановка продаж</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col2">
+						<table class="search-results__info">
+							<tr>
+								<td><img src="img/icons/badge.png"></td>
+								<td>Лучшее предложение</td>
+							</tr>
+							<tr>
+								<td><img src="img/icons/dynamic.png"></td>
+								<td>Динамика цены, наличие мест на рейсы</td>
+							</tr>
+							<tr>
+								<td><img src="img/icons/clock.png"></td>
+								<td>Возможна рассрочка платежей</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<table class="search-results__table">
+				<thead>
+					<tr>
+						<td>Заезд</td>
+						<td>Тур</td>
+						<td>Ночей</td>
+						<td>Гостиница</td>
+						<td>Питание</td>
+						<td>Номер / Размещение</td>
+						<td></td>
+						<td>Цена</td>
+						<td>Тип цены</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td>
+							<img src="img/icons/dynamic-inactive.png">
+							<img src="img/icons/dynamic.png">
+							<img src="img/icons/badge.png">
+						</td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td>
+							<img src="img/icons/clock.png">
+						</td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+					<tr>
+						<td>14.14.14 Вс</td>
+						<td>Маврикий</td>
+						<td>5</td>
+						<td>IRUFUSHI BEACH & SPA RESORT (ex.THE HILTON MALDIVES)</td>
+						<td>Полупансион</td>
+						<td>Ocean Wave Deluxe Roome / DBL</td>
+						<td><img src="img/icons/dynamic-inactive.png" alt=""></td>
+						<td><b>84561 грн</b></td>
+						<td>MAV-1.1-EBA-60</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- END search-results -->
 	</div>
 </div>
 <!-- END out-->

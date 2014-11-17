@@ -373,6 +373,28 @@ $yellow: #b08f52
 		height: 35px
 		width: 100%
 		margin-top: 15px
+	&_tour
+		+clr
+		width: auto
+		margin-bottom: 5px
+		.two-col
+			margin-bottom: 10px
+		.title
+			margin-bottom: 35px
+	&__left
+		float: left
+		width: 550px
+		box-sizing: border-box
+		padding-left: 102px
+	&__right
+		float: right
+		width: 380px
+		box-sizing: border-box
+		> .checkbox
+			margin: 5px 0 0 80px
+			& + .checkbox
+				margin-top: 0
+				margin-bottom: 16px
 
 .select
 	position: relative
@@ -391,9 +413,33 @@ $yellow: #b08f52
 		margin: 15px auto 0
 		.select__label
 			left: -125px
+	&_small
+		width: 75px
+		display: inline-block
+		vertical-align: top
+		margin: 0 0 15px 80px
+		.select__label
+			left: -80px
+			width: 70px
+			text-align: right
+	&_medium
+		width: 140px
+		margin: 5px 0 0 80px
+		display: inline-block
+		vertical-align: top
+		.select__label
+			left: -80px
+			width: 70px
+			text-align: right
+		& + .select_small
+			margin-top: 5px
+			margin-bottom: 0
 	&_no-border
 		padding: 0
-		border: 0
+		border-color: transparent
+		.checkbox
+			vertical-align: middle
+			line-height: 1.4
 	&__label
 		position: absolute
 		top: 1px
@@ -563,9 +609,82 @@ $yellow: #b08f52
 		vertical-align: middle
 		margin-right: 9px
 		&:last-child
-			margin: 0 
+			margin: 0
 	+ .checkbox
 		margin-left: 20px
 		vertical-align: middle
 		height: 16px
 		line-height: 16px
+
+.search-btn-wrap
+	@extend .subscribe
+	margin: 0
+	padding: 25px 0
+	.btn
+		display: block
+		margin: auto
+		width: 380px
+
+.search-results
+	margin: 20px 0
+	font-family: Verdana, Arial, sans-serif
+	font-size: 10px
+	line-height: 1.2
+	letter-spacing: 0.01em
+
+.search-results__header
+	margin-bottom: 20px
+	.two-col
+		.col1,.col2
+			width: 300px
+
+.search-results__info
+	td
+		vertical-align: middle
+		height: 35px
+		&:first-child
+			padding-right: 10px
+		img
+			display: block
+
+.search-results__table
+	td
+		border: 1px solid #EAEFF0
+		height: 53px
+		box-sizing: border-box
+		vertical-align: middle
+		padding: 0 7px
+		&:first-child
+			width: percentage(65/950)
+		&:nth-child(2)
+			width: percentage(78/950)
+			text-align: center
+		&:nth-child(3)
+			width: percentage(57/950)
+			text-align: center
+		&:nth-child(4)
+			width: percentage(195/950)
+		&:nth-child(5)
+			width: percentage(110/950)
+		&:nth-child(6)
+			width: percentage(170/950)
+		&:nth-child(7)
+			width: percentage(140/950)
+			text-align: center
+		&:nth-child(8)
+			width: percentage(68/950)
+			text-align: center
+		&:nth-child(9)
+			width: percentage(67/950)
+			text-align: center
+		img
+			display: inline-block
+			vertical-align: middle
+	thead
+		td
+			background: #E3E5E5
+			font-weight: 700
+	tbody
+		tr:hover
+			background: #fcfcfc
+			+tr(background 0.1s linear)
