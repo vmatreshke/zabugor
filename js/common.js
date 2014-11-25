@@ -186,4 +186,13 @@ head.ready(function() {
 		});
 	}
 
+	//jquery ui datepicker
+  $.datepicker.setDefaults(
+    $.extend(
+      {'dateFormat':'dd.mm.yy'},
+      $.datepicker.regional['ru']
+    )
+  );
+  $('.js-datepicker').datepicker({});
+
 });
