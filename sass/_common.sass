@@ -701,3 +701,17 @@ a
 			+tr(0.1s linear)
 			&.is-active, &:hover
 				color: $dark
+
+.fix-col
+	font-size: 0
+	.col-three
+		float: none
+		display: inline-block
+		vertical-align: top
+		+r(w1250)
+			padding-left: 2.5%
+			padding-right: 2.5%
+			&:nth-child(3n+1)
+				padding-left: 2.5%
+			.info
+				padding-left: 0

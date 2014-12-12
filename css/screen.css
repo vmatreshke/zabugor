@@ -278,6 +278,12 @@ a { text-decoration: none; }
 .pagi__items a { padding: 0 19px; font-family: "rex_bold", Arial, sans-serif; font-size: 20px; line-height: 37px; color: #bd904d; -moz-transition: linear 0.1s; -o-transition: linear 0.1s; -webkit-transition: linear 0.1s; transition: linear 0.1s; }
 .pagi__items a.is-active, .pagi__items a:hover { color: #303030; }
 
+.fix-col { font-size: 0; }
+.fix-col .col-three { float: none; display: inline-block; vertical-align: top; }
+@media only screen and (max-width: 1250px) { .fix-col .col-three { padding-left: 2.5%; padding-right: 2.5%; }
+  .fix-col .col-three:nth-child(3n+1) { padding-left: 2.5%; }
+  .fix-col .col-three .info { padding-left: 0; } }
+
 .ui-helper-hidden { display: none; }
 
 .ui-helper-hidden-accessible { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
