@@ -1453,12 +1453,12 @@ a { text-decoration: none; }
 .popup .btn-close { position: absolute; top: 15px; right: 12px; }
 .popup p { text-align: center; }
 
-.popup_mod { width: 632px; padding: 25px 60px 35px; }
+.popup_mod { width: 632px; padding: 25px 60px 25px; }
 .popup_mod textarea { resize: none; display: block; width: 100%; margin-top: 9px; padding: 4px 5px; border: 2px solid #cccccc; font-family: "futurabookc", Arial, sans-serif; font-size: 16px; line-height: 20px; color: #303030; }
 
 .popup__text { font-size: 16px; line-height: 1.375; letter-spacing: 0.05em; color: #171717; font-family: "futurabookc", Arial, sans-serif; }
 
-.popup__info { padding-top: 35px; }
+.popup__info { padding-top: 25px; }
 
 .popup__title { font-size: 12px; line-height: 1.66; letter-spacing: 0.05em; color: #333333; font-family: "futurademic", Arial, sans-serif; text-transform: uppercase; display: block; margin-bottom: 7px; }
 .popup__title span { display: block; padding: 0 17px; }
