@@ -483,7 +483,7 @@ a { text-decoration: none; }
 .link-item a:after { bottom: 0; }
 .link-item a:before { top: 100%; opacity: 0; visibility: hidden; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 
-.banner { position: relative; padding: 6px; float: left; margin: 0 0 8px 50px; width: 465px; min-height: 222px; border: 2px solid #bd904d; text-align: center; }
+.banner { position: relative; padding: 6px; float: left; margin: 0 0 8px 50px; width: 465px; min-height: 222px; height: 315px; border: 2px solid #bd904d; text-align: center; }
 .banner:first-child, .banner:nth-child(2n+1) { margin-left: 0; }
 @media only screen and (max-width: 1250px) { .banner { margin-left: 30px; } }
 .banner:hover .banner__overlay { height: 100%; }
