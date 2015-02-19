@@ -31,3 +31,102 @@
 		right: 12px
 	p
 		text-align: center
+
+//valik
+.popup-wrap
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	overflow: auto
+	display: none
+	+vertical
+	padding: 10px
+	z-index: 1001  
+	&.is-active
+		display: block
+	.popup
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		top: auto
+		left: auto
+		+transform(translateX(0%) translateY(0%)) 
+.popup_mod
+	width: 632px
+	padding: 25px 60px 25px 
+	textarea
+		resize: none
+		display: block
+		width: 100%
+		margin-top: 9px
+		padding: 4px 5px
+		border: 2px solid #cccccc
+		+book
+		font-size: 16px
+		line-height: 20px
+		color: #303030
+.popup__text
+	font-size: 16px
+	line-height: 1.375
+	letter-spacing: 0.05em 
+	color: #171717 
+	+book
+.popup__info
+	padding-top: 25px
+.popup__title
+	font-size: 12px
+	line-height: 1.66
+	letter-spacing: 0.05em 
+	color: #333333 
+	+demic
+	text-transform: uppercase
+	display: block
+	margin-bottom: 7px
+	span
+		display: block
+		padding: 0 17px
+.popup__radio
+	li
+		margin-bottom: 7px 
+.popup__rating
+	li
+		text-align: justify
+		font-size: 0.1px
+		margin-bottom: 6px
+		&:after
+			content: "" 
+			width: 100%
+			display: inline-block
+	span
+		display: inline-block
+		vertical-align: top
+		max-width: 270px
+		font-size: 12px
+		line-height: 2
+		color: #999
+		text-transform: uppercase
+		letter-spacing: 0.05em 
+		+demic
+	ul
+		font-size: 0
+		display: inline-block
+		vertical-align: top
+		li
+			display: inline-block
+			text-align: left
+			margin-bottom: 0
+			a
+				font-size: 12px
+				line-height: 24px
+				color: #b08f52 
+				+demic
+				width: 24px
+				+border-radius(50%)
+				display: block
+				text-align: center
+				+transition(all 0.2s linear)
+				&.is-active, &:hover
+					background: #b08f52
+					color: #fff  

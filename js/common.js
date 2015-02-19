@@ -5,6 +5,7 @@ head.ready(function() {
 		$('.js-overlay').fadeOut(500);
 		$(".js-share").removeClass("is-active");
 		$(".js-drop").removeClass("is-active");
+		$(".js-popup-wrap").removeClass("is-active");
 	});
 
 	setTimeout(function(){
@@ -24,6 +25,7 @@ head.ready(function() {
 	$(".js-overlay-menu, .js-menu-close").on("click", function(event){
 		$(".js-overlay-menu, .js-menu").removeClass("is-visible");
 		$(".js-nav").show();
+		$('.js-popup-wrap').removeClass('is-active');
 		return false;
 		event.stopPropagation();
 	});
@@ -143,6 +145,7 @@ head.ready(function() {
 	$('.js-link-to-popup').on('click', function(event) {
 		var targetPopup = $('#' + $(this).attr('href'));
 		$('.js-overlay').fadeIn(200);
+		$('.js-popup-wrap').toggleClass('is-active');
 		targetPopup.fadeIn(500);
 		event.stopPropagation();
 		return false
@@ -151,6 +154,7 @@ head.ready(function() {
 	$('.js-close-popup').on('click', function(event) {
 		$(this).parents('.js-popup').fadeOut(200);
 		$('.js-overlay').fadeOut(500);
+		$('.js-popup-wrap').removeClass('is-active');
 		event.stopPropagation();
 		return false
 	});
