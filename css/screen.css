@@ -1457,13 +1457,14 @@ a { text-decoration: none; }
 .popup-wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup-wrap.is-active { display: block; }
 .popup-wrap .popup { display: inline-block; vertical-align: middle; position: relative; top: auto; left: auto; -moz-transform: translateX(0%) translateY(0%); -ms-transform: translateX(0%) translateY(0%); -webkit-transform: translateX(0%) translateY(0%); transform: translateX(0%) translateY(0%); text-align: left; }
+.popup-wrap .popup .btn-close { top: 25px; }
 
-.popup_mod { width: 632px; padding: 25px 60px 25px; }
+.popup_mod { width: 632px; padding: 15px 60px 15px; }
 .popup_mod textarea { resize: none; display: block; width: 100%; margin-top: 9px; padding: 4px 5px; border: 2px solid #cccccc; font-family: "futurabookc", Arial, sans-serif; font-size: 16px; line-height: 20px; color: #303030; }
 
 .popup__text { font-size: 16px; line-height: 1.375; letter-spacing: 0.05em; color: #171717; font-family: "futurabookc", Arial, sans-serif; }
 
-.popup__info { padding-top: 25px; }
+.popup__info { padding-top: 20px; }
 
 .popup__title { font-size: 12px; line-height: 1.66; letter-spacing: 0.05em; color: #333333; font-family: "futurademic", Arial, sans-serif; text-transform: uppercase; display: block; margin-bottom: 7px; }
 .popup__title span { display: block; padding: 0 17px; }
