@@ -1456,7 +1456,7 @@ a { text-decoration: none; }
 .popup-wrap { position: fixed; top: 0; left: 0; bottom: 0; right: 0; overflow: auto; display: none; text-align: center; font-size: 0; padding: 10px; z-index: 1001; }
 .popup-wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup-wrap.is-active { display: block; }
-.popup-wrap .popup { display: inline-block; vertical-align: middle; position: relative; top: auto; left: auto; -moz-transform: translateX(0%) translateY(0%); -ms-transform: translateX(0%) translateY(0%); -webkit-transform: translateX(0%) translateY(0%); transform: translateX(0%) translateY(0%); }
+.popup-wrap .popup { display: inline-block; vertical-align: middle; position: relative; top: auto; left: auto; -moz-transform: translateX(0%) translateY(0%); -ms-transform: translateX(0%) translateY(0%); -webkit-transform: translateX(0%) translateY(0%); transform: translateX(0%) translateY(0%); text-align: left; }
 
 .popup_mod { width: 632px; padding: 25px 60px 25px; }
 .popup_mod textarea { resize: none; display: block; width: 100%; margin-top: 9px; padding: 4px 5px; border: 2px solid #cccccc; font-family: "futurabookc", Arial, sans-serif; font-size: 16px; line-height: 20px; color: #303030; }
@@ -1472,7 +1472,7 @@ a { text-decoration: none; }
 
 .popup__rating li { text-align: justify; font-size: 0.1px; margin-bottom: 6px; }
 .popup__rating li:after { content: ""; width: 100%; display: inline-block; }
-.popup__rating span { display: inline-block; vertical-align: top; max-width: 270px; font-size: 12px; line-height: 2; color: #999999; text-transform: uppercase; letter-spacing: 0.05em; font-family: "futurademic", Arial, sans-serif; }
+.popup__rating span { display: inline-block; vertical-align: top; max-width: 270px; font-size: 12px; line-height: 2; color: #999999; text-transform: uppercase; letter-spacing: 0.05em; font-family: "futurademic", Arial, sans-serif; text-align: left; }
 .popup__rating ul { font-size: 0; display: inline-block; vertical-align: top; }
 .popup__rating ul li { display: inline-block; text-align: left; margin-bottom: 0; }
 .popup__rating ul li a { font-size: 12px; line-height: 24px; color: #b08f52; font-family: "futurademic", Arial, sans-serif; width: 24px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; display: block; text-align: center; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
